@@ -53,9 +53,9 @@ const mediaPoints = [
 ];
 
 const carouselImages = [
-  "/public/slide/pur1.webp",
-  "/public/slide/pur2.webp",
-  "/public/slide/pur3.webp",
+  "/slide/pur1.webp",
+  "/slide/pur2.webp",
+  "/slide/pur3.webp",
 
 ];
 
