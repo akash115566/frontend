@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ Full Section Background Fixed */
+.contact-section-fixed-bg {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("/about/a1.jpeg") center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* ✅ Dark overlay for readability */
+.contact-overlay {
+  width: 100%;
+  height: 100%;
+  /* background: rgba(0, 0, 0, 0.55); */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 10%;
+}
+
+/* ✅ Left-side text */
+.contact-text {
+  max-width: 600px;
+}
+
+.contact-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f7931e;
+  margin-bottom: 20px;
+}
+
+.contact-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #f2f2f2;
+}
+
+.contact-btn {
+  background: #f7931e;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: #d87e15;
+}
+
+/* ✅ Responsive Styles */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact-section-fixed-bg {
+    background-attachment: scroll; /* mobile-friendly */
+  }
+
+  .contact-overlay {
+    padding: 50px 6%;
+  }
+
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+
+  .contact-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles ≤480px */
+@media (max-width: 480px) {
+  .contact-section-fixed-bg {
+    background-attachment: scroll; /* improve performance on mobile */
+    background-position: center;
+    min-height: 100px;
+  }
+
+  .contact-overlay {
+    padding: 40px 30px;
+    justify-content: center;
+    text-align: center;
+    line-height: 25px;
+  }
+
+  .contact-text {
+    max-width: 100%;
+  }
+
+  .contact-text h2 {
+    font-size: 1.1rem;
+    margin-top: 30px;
+  }
+
+  .contact-text p {
+    font-size: 0.80rem;
+  }
+
+  .contact-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+
+/* ✅ Full Section with Fixed Background */
+.contact-form-section {
+  position: relative;
+  width: 100%;
+  background: url("https://businesscare.org.in/wp-content/uploads/2023/03/bnh.jpeg")
+    center center / cover no-repeat fixed;
+  color: #fff;
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ✅ Overlay for readability */
+.contact-form-overlay {
+  background: rgba(0, 0, 0, 0.65);
+  padding: 60px 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-form-overlay h2 {
+  font-size: 2.5rem;
+  color: #f7931e;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+/* ✅ Form Styling */
+.contact-form {
+  width: 100%;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-grid input,
+.form-grid select {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  background: #fff;
+  color: #222;
+}
+
+.form-grid input::placeholder {
+  color: #666;
+}
+
+/* ✅ Submit Button */
+.submit-btn {
+  margin-top: 30px;
+  background: #f7931e;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #d87e15;
+}
+
+/* ✅ Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contact-form-overlay {
+    padding: 50px 30px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+
+  .contact-form-overlay h2 {
+    font-size: 2rem;
+  }
+
+  .form-intro {
+    font-size: 1rem;
+  }
+}
+
+/* Mobiles ≤480px */
+@media (max-width: 480px) {
+  .contact-form-section {
+    background-attachment: scroll; /* better for mobile performance */
+    padding: 50px 15px;
+  }
+
+  .contact-form-overlay {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; /* single column form */
+    gap: 15px;
+  }
+
+  .contact-form-overlay h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-intro {
+    font-size: 0.95rem;
+  }
+
+  .form-grid input,
+  .form-grid select {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .submit-btn {
+    font-size: 1rem;
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+
+
+
+
+
+/* ✅ Section Layout */
+.location-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 10%;
+  background: #fffaf2;
+  flex-wrap: wrap;
+}
+
+/* ✅ Left side text */
+.location-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.location-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #f7931e;
+  margin-bottom: 20px;
+}
+
+.location-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* ✅ Right side map */
+.location-map {
+  flex: 1;
+  min-width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ✅ Responsive Design */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .location-section {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 6%;
+  }
+
+  .location-content h2 {
+    font-size: 2rem;
+  }
+
+  .location-content p {
+    font-size: 1rem;
+  }
+
+  .location-map {
+    height: 350px;
+    width: 100%;
+  }
+}
+
+/* Mobiles ≤480px */
+@media (max-width: 480px) {
+  .location-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .location-content {
+    text-align: center;
+  }
+
+  .location-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .location-content p {
+    font-size: 0.95rem;
+  }
+
+  .location-map {
+    width: 100%;
+    height: 300px;
+  }
+}

@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 🌐 Hero Section with Fixed Background */
+.fixed-bg-section2 {
+  position: relative;
+  background-image: url("/public/about/aw1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 150px 10%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.overlay2 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.text-content2 {
+  max-width: 600px;
+  color: #fff;
+}
+
+.text-content2 h2 {
+  font-size: 3rem;
+  color: #f7931e;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.text-content2 h3 {
+  font-size: 1.8rem;
+  color: #ffd580;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.text-content2 p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background: linear-gradient(135deg, #f7931e, #ffbb55);
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #ff9f45, #ffc47a);
+  transform: translateY(-3px);
+}
+
+/* ✅ Wave Divider */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+
+/* ✅ Responsive — 992px */
+@media (max-width: 992px) {
+  .text-content2 h2 {
+    font-size: 2.5rem;
+  }
+  .text-content2 h3 {
+    font-size: 1.5rem;
+  }
+  .text-content2 p {
+    font-size: 1rem;
+  }
+}
+
+/* ✅ Responsive — 600px */
+@media (max-width: 600px) {
+  .fixed-bg-section2 {
+    padding: 80px 5%;
+  }
+  .text-content2 h2 {
+    font-size: 2rem;
+  }
+  .text-content2 h3 {
+    font-size: 1.2rem;
+  }
+  .text-content2 p {
+    font-size: 0.9rem;
+  }
+  .cta-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ✅ ✅ ✅ FINAL 480px MOBILE FIX */
+@media (max-width: 480px) {
+
+  .fixed-bg-section2 {
+    padding: 60px 5%;
+    height: 40vh;                        /* mobile height auto fix */
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll !important;  /* mobile par crop fix */
+    text-align: center;
+    justify-content: center;
+  }
+
+  .overlay2 {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .text-content2 {
+    max-width: 100%;
+  }
+
+  .text-content2 h2 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .text-content2 h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-content2 p {
+    font-size: 0.85rem;
+  }
+
+  .cta-btn {
+    margin: 10px auto;
+    display: block;
+  }
+
+  .wave-divider {
+    height: 70px;   /* mobile ke liye adjust */
+  }
+}
+
+
+/* 🌐 Awards Section */
+.awards-section {
+  background: #fdfaf6;
+  padding: 80px 5%;
+}
+
+.awards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.award-card {
+  /* background: #fff; */
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  flex: 1 1 250px;
+  max-width: 300px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.award-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.award-year {
+  font-size: 2rem;
+  color: #f7931e;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.award-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.award-info p {
+  color: #fff;
+  font-size: 1rem;
+}
+
+/* 🌐 Responsive */
+@media (max-width: 992px) {
+  .awards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .awards-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .awards-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+
+
+.gallery-section {
+  position: relative;
+  padding: 60px 2%;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+   border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.gallery-header h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images side by side */
+  gap: 20px;
+}
+.gallery-card {
+  width: 100%;
+  height: 400px;           /* container height */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fit entire image without cropping */
+}
+
+
+.gallery-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Wave Shape Divider at Bottom */
+.wave-divider1 {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.wave-divider1 svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 🔹 Responsive */
+@media (max-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+  .gallery-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .gallery-container {
+    grid-template-columns: 1fr;  
+    gap: 10px;
+  }
+
+  .gallery-card {
+    width: 100%;
+    height: 300px;               /* ✅ fixed uniform height */
+    background: #000;            /* ✅ empty space hide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .gallery-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;         /* ✅ NO CUT, full image visible */
+    background-color: #000;      /* ✅ clean border-less view */
+  }
+}
+
+
+
+
+
+
+/* ================= Hero Section ================= */
+.awards-text-section {
+  padding: 30px 10%;
+   background: linear-gradient(135deg, #2563eb, #9333ea);
+   border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  text-align: center;  /* center everything */
+}
+
+.awards-text-section .container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+  /* max-width: 800px; */
+  margin: 0 auto;
+}
+
+.awards-text-section h2 {
+    text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  /* margin-top: 80px; */
+  color: #ff7a00;
+}
+
+.awards-text-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .awards-text-section h2 {
+    font-size: 2.4rem;
+  }
+  .awards-text-section p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .awards-text-section {
+    padding: 60px 5%;
+  }
+  .awards-text-section h2 {
+    font-size: 2rem;
+  }
+  .awards-text-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .awards-text-section h2 {
+    font-size: 1.6rem;
+  }
+  .awards-text-section p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= Wave Divider ================= */
+.wave-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.wave-divider svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ================= Awards List ================= */
+.awards-section1 {
+  padding: 60px 10%;
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+   border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.awards-container1 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.award-card1 {
+  /* background: #fff; */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.award-card1:hover {
+  transform: translateY(-5px);
+}
+
+.award-year1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff7a00;
+  margin-bottom: 10px;
+}
+
+.award-info1 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.award-info1 p {
+  font-size: 1rem;
+  color: black;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 1024px) {
+  .awards-container1 {
+    grid-template-columns: 1fr;
+  }
+
+  .text-content-left h1 {
+    font-size: 2.2rem;
+  }
+}
+

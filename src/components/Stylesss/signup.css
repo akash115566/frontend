@@ -1,0 +1,77 @@
+/* Container background */
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(to right, #4f46e5, #9333ea); */
+  font-family: Arial, sans-serif;
+}
+
+/* Card box */
+.register-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+}
+
+/* Heading */
+.register-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #eab308;
+}
+
+/* Input fields */
+.register-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.register-box input:focus {
+  border: 1px solid #4f46e5;
+}
+
+/* Button */
+.register-box button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #eab308;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.register-box button:hover {
+  background: #eab308;
+}
+
+/* Bottom text */
+.register-box p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-box a {
+  color: #eab308;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-box a:hover {
+  text-decoration: underline;
+}

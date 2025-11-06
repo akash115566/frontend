@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 🔹 Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* 🔹 Page Layout */
+.policy-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 40px;
+}
+
+/* 🔹 Hero Section with Fixed Background */
+.policy-hero {
+  position: relative;
+  height: 60vh;
+  background-image: url("https://businesscare.org.in/wp-content/uploads/2023/03/bnh.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* ✅ Image Fixed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.policy-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #f7931e;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-address {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* 🔹 Policy Content */
+.policy-content {
+  /* text-align: center; */
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+   border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  padding: 60px 8%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.policy-content h2 {
+  color: #f7931e;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.policy-content p {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  color: white;
+  text-align: center;
+}
+
+/* 🔹 Footer */
+.policy-footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+}
+
+/* 🔹 Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .policy-content {
+    padding: 40px 6%;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-hero {
+    height: 50vh;
+    background-attachment: scroll; /* ✅ Mobile safe */
+  }
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .policy-content {
+    padding: 30px 5%;
+  }
+}
