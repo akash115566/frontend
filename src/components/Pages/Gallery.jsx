@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { ThemeContext } from "../../ThemeContext";
-import "../Stylesss/Gallery.css";
+import "../Stylesss/gallery.css";
 import { useOutletContext } from "react-router-dom";
 
 const Gallery = () => {

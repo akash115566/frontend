@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
-import "../Stylesss/StrategyPage.css";
+import "../Stylesss/strategyPage.css";
 
 const StrategyPage = () => {
   const { themeColor, gradient } = useContext(ThemeContext);

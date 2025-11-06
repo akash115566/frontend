@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ThemeContext } from "../../ThemeContext";
-import "../Stylesss/Service.css";
+import "../Stylesss/service.css";
 
 const Service = () => {
   const { themeColor, gradient } = useContext(ThemeContext);
