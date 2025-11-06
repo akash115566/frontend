@@ -15,7 +15,7 @@ import Contact from "./components/Pages/Contact";
 import Founder from "./components/Pages/Founder";
 // import Mision from "./components/Pages/MissionVision";
 import Mission from "./components/Pages/Mission";
-import WhyUs from "./components/Pages/Whyus";
+import WhyUs from "./components/Pages/WhyUs";
 import ScrollToTop from "./components/Pages/ScrollToTop";
 import PolicyPage from "./components/Pages/PolicyPage";
 import SalesPage from "./components/Pages/SalesPage";
