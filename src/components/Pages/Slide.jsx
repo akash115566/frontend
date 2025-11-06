@@ -196,7 +196,7 @@ const Slide = () => {
 
         <div className="main-right">
           <div className="right-img">
-            <img src="./public/slide/mt1.webp" alt="home" />
+            <img src="/slide/mt1.webp" alt="home" />
           </div>
         </div>
 
