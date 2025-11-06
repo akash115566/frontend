@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
 
-import "../Stylesss/SalesPage.css";
+import "../Stylesss/salesPage.css";
 
 const SalesPage = () => {
   const { themeColor, gradient } = useContext(ThemeContext);
