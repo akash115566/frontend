@@ -152,7 +152,7 @@
 }
 
 .video-container {
-  background-color:black;
+  background-color: black;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   padding: 1.5rem;
@@ -170,8 +170,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  min-width: 720px;
-  overflow-x: auto;
 }
 
 .video-item {
@@ -198,17 +196,10 @@
   margin-top: 1rem;
 }
 
-/* Responsive styling for width <= 480px */
+/* ✅ Width <= 480px par videos ek column me */
 @media (max-width: 480px) {
   .video-grid {
-    display: flex;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-  }
-
-  .video-item {
-    flex: 0 0 80%;
+    grid-template-columns: 1fr;
   }
 
   .video-heading {
