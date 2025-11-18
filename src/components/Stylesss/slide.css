@@ -101,7 +101,7 @@
 /* Slider Styles */
 .slider {
   width: 98.8vw;       /* full screen width */
-  height: 610px;      /* fixed height */
+  height: 580px;      /* fixed height */
   overflow: hidden;
   position: relative;
   border-radius: 12px;
