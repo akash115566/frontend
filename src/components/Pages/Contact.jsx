@@ -34,7 +34,7 @@ const Contact = () => {
       <section className="contact-section-fixed-bg">
         <div className="contact-overlay">
           <div className="contact-text">
-            <h2>Let’s Connect with BusinessCare</h2>
+            <h2>Let’s Connect with MSME Business Care</h2>
             <p>
               Have questions about growing your business or want to discuss your
               next project? Our team is here to guide you with the right marketing
@@ -58,7 +58,7 @@ const Contact = () => {
 
       <section className="contact-form-section">
         <div className="contact-form-overlay">
-          <h2>Get in Touch with BusinessCare</h2>
+          <h2>Get in Touch with MSME Business Care</h2>
           <p className="form-intro">
             Fill out the details below and our experts will contact you to plan
             your business growth journey.

@@ -53,8 +53,8 @@ const Service = () => {
       // }}
       >
         <div className="overlay">
-          <div className="text-content left-align">
-            <h2>🏆 BusinessCare Awards & Recognition</h2>
+          <div className="text-content">
+            <h2>🏆 MSME BusinessCare Awards &  Recognition</h2>
             <h3>
               Celebrating Excellence in <span>Business & Marketing</span>
             </h3>

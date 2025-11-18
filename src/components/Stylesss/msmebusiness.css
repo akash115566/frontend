@@ -1,0 +1,160 @@
+/* ---------------------------------------------------
+   MAIN PAGE
+--------------------------------------------------- */
+.msme-page {
+  width: 100%;
+  background: #f5f6fa;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+}
+
+/* ---------------------------------------------------
+   🔥 FULL-WIDTH TOP BANNER
+--------------------------------------------------- */
+.top-banner {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+
+  background: linear-gradient(135deg, #1a237e, #283593);
+  padding: 60px 6%;
+  box-sizing: border-box;
+
+  color: #fff;
+}
+
+.top-banner-left {
+  width: 50%;
+}
+
+.top-banner-left h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.top-banner-left h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #e2e2e2;
+}
+
+.top-banner-left p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-line {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #ffeb3b;
+  font-weight: 700;
+}
+
+.top-banner-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.top-banner-right img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+/* ---------------------------------------------------
+   🔥 CONTENT SECTION
+--------------------------------------------------- */
+.msme-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.msme-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.msme-content h3 {
+  font-size: 1.5rem;
+  margin-top: 25px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.msme-content p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+/* ---------------------------------------------------
+   🔥 GRID FOR CATEGORIES
+--------------------------------------------------- */
+.msme-category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.msme-category-grid p {
+  background: #fff;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+}
+
+/* ---------------------------------------------------
+   🔥 RESPONSIVE DESIGN
+--------------------------------------------------- */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .top-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 5%;
+  }
+
+  .top-banner-left,
+  .top-banner-right {
+    width: 100%;
+  }
+
+  .top-banner-right img {
+    max-width: 350px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .top-banner-left h1 {
+    font-size: 2rem;
+  }
+
+  .top-banner-left h2 {
+    font-size: 1.2rem;
+  }
+
+  .msme-category-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .top-banner-right img {
+    width: 90%;
+  }
+}

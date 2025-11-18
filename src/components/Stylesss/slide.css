@@ -14,199 +14,327 @@
   background-position: center;
 }
 
+
+/* ✅ Responsive images inside container */
+/* .container img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  border-radius: 16px;
+  object-fit: cover;
+} */
+
+/* ✅ Headings & Text */
+/* .container h1,
+.container h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+} */
+
+/* .container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ✅ Buttons inside container */
+
+/* ✅ Responsive Layouts */
+
+/* Tablets (<=1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 4%;
+  }
+}
+
+/* Mobile Landscape (<=768px) */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 3%;
+  }
+  /* .container h1,
+  .container h2 {
+    font-size: 1.6rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+  .container .content {
+    gap: 25px;
+  } */
+}
+
+/* Small Phones (<=480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px 0%;
+  }
+  /* .container h1,
+  .container h2 {
+    font-size: 1.4rem;
+  }
+  .container p {
+    font-size: 0.95rem;
+  }
+  .container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  } */
+}
+
+
+
+
+
 .main {
   width: 100%;
   display: flex;
   flex-wrap: wrap; /* responsive ke liye */
 }
 
-
-
-/* Slider Outer */
-.one-slider {
-  width: 100vw;
+/* Slider Styles */
+.slider {
+  width: 98.8vw;       /* full screen width */
+  height: 610px;      /* fixed height */
   overflow: hidden;
   position: relative;
+  border-radius: 12px;
   margin-top: 30px;
-  margin-bottom: 150px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-/* Track */
-.one-track {
+.slider-track {
   display: flex;
-  animation: move 18s steps(5) infinite;
+  transition: transform 0.5s ease-in-out; /* smooth jump */
 }
 
-/* Each slide */
-.slide-box {
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.slider-track img {
+  width: 98.8vw;        /* each image full viewport width */
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
 }
-
-/* ✅ Full width + no crop */
-.slide-img {
-  width: 100%;        /* ✅ Full width */
-  height: auto;       /* ✅ Auto height (no crop) */
-  object-fit: contain;
-}
-
-/* Animation */
-@keyframes move {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-500vw); }
-}
-
-/* Mobile */
 @media (max-width: 480px) {
-  .slide-img {
-    width: 100%;
-    height: auto;
+ .slider {
+  width: 100vw;       /* full screen width */
+  height: 195px;      /* fixed height */
+  overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* smooth jump */
+}
+
+.slider-track img {
+  width: 100vw;        /* each image full viewport width */
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+}
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .slider {
+    width: 100vw;          /* पूरी screen width */
+    height: 160px;         /* 360px screens पर थोड़ा कम height ताकि image crop न लगे */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;   /* compact radius */
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* smooth slide transition */
+  }
+
+  .slider-track img {
+    width: 100vw;          /* हर image पूरे viewport जितनी */
+    height: 100%;
+    flex-shrink: 0;
+    object-fit: cover;     /* image neatly fill करे बिना stretch हुए */
   }
 }
 
 
 
 /* 🎯 TV Banner */
+/* 🔹 Main Container */
 .tv-banner {
-  position: relative;
-  background-image: linear-gradient(to right, #ed17a5, #721ac5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 2%;
+  background: linear-gradient(135deg, #3b0a91, #6c2bd9);
   color: #fff;
-  text-align: center;
-  padding: 100px 30px;
-  border-radius: 20px;
-  height: 350px;
-  min-height: 350px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  transition: all 0.4s ease;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
-/* 🌐 Decorative glass circles */
-.tv-banner::before,
-.tv-banner::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  z-index: 0;
+/* 🔹 Left Section */
+.tv-left {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 
-.tv-banner::before {
-  width: 250px;
-  height: 250px;
-  top: -80px;
-  left: -80px;
+.tv-left h1 {
+  font-size: 2.8rem;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
-.tv-banner::after {
-  width: 300px;
-  height: 300px;
-  bottom: -100px;
-  right: -100px;
+.tv-left h1 span {
+  color: #ffd700; /* gold accent */
 }
 
-/* 🏷️ Heading */
-.tv-banner h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 25px;
-  position: relative;
-  z-index: 1;
-  line-height: 1.2;
-}
-
-.tv-banner h1 span {
-  color: #ffcc00;
-  background: linear-gradient(90deg, #ffcc00, #ffaa00);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* ✍️ Paragraph */
-.tv-banner p {
+.tv-left p {
   font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #e0e0e0;
-  position: relative;
-  z-index: 1;
-  line-height: 1.5;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #e4e4e4;
 }
 
-/* 🔘 Button */
 .tv-btn {
-  background: linear-gradient(90deg, #ffcc00, #ffaa00);
-  color: #1e1e1e;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 14px 32px;
+  background: #ffd700;
+  color: #3b0a91;
   border: none;
-  border-radius: 40px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
+  width: fit-content;
 }
 
 .tv-btn:hover {
-  background: linear-gradient(90deg, #ffaa00, #ff8800);
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 170, 0, 0.4);
+  background: #fff;
+  color: #3b0a91;
+  transform: scale(1.05);
 }
 
-/* 📱 Responsive */
+/* 🔹 Right Section */
+.tv-right {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Tablet (max-width: 1024px) */
+.tv-video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 🔹 Responsive Design */
 @media (max-width: 1024px) {
   .tv-banner {
-    padding: 80px 25px;
+    padding: 50px 5%;
   }
-  .tv-banner h1 {
-    font-size: 2.5rem;
+
+  .tv-left h1 {
+    font-size: 2.4rem;
   }
-  .tv-banner p {
+
+  .tv-left p {
     font-size: 1.1rem;
   }
 }
 
-/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .tv-banner {
-    padding: 70px 20px;
-    border-radius: 15px;
+    flex-direction: column;
+    text-align: center;
   }
-  .tv-banner h1 {
+
+  .tv-left {
+    flex: 1 1 100%;
+    align-items: center;
+  }
+
+  .tv-right {
+    flex: 1 1 100%;
+    margin-top: 30px;
+  }
+
+  .tv-video {
+    max-width: 400px;
+  }
+
+  .tv-left h1 {
     font-size: 2rem;
   }
-  .tv-banner p {
+
+  .tv-left p {
     font-size: 1rem;
   }
+
   .tv-btn {
-    padding: 12px 28px;
-    font-size: 1rem;
+    padding: 12px 22px;
+    font-size: 0.95rem;
   }
 }
 
-/* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .tv-banner {
-    padding: 120px 15px;
+    padding: 40px 20px;
   }
-  .tv-banner h1 {
+
+  .tv-left h1 {
     font-size: 1.6rem;
   }
-  .tv-banner p {
-    font-size: 0.95rem;
-  }
-  .tv-btn {
-    padding: 10px 22px;
+
+  .tv-left p {
     font-size: 0.9rem;
   }
+
+  .tv-video {
+    max-width: 320px;
+  }
 }
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .tv-banner {
+    padding: 30px 15px; /* थोड़ा compact padding */
+  }
+
+  .tv-left h1 {
+    font-size: 1.3rem; /* छोटे screens पर perfect heading size */
+    line-height: 1.4;
+    text-align: center; /* center alignment better look देता है */
+  }
+
+  .tv-left p {
+    font-size: 0.85rem; /* readable small screen font */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .tv-video {
+    max-width: 280px;  /* छोटे screen के हिसाब से video size */
+    width: 100%;
+    margin: 0 auto;    /* center me video */
+    display: block;
+    border-radius: 10px;
+  }
+}
+
 
 
 /* .main{
@@ -223,6 +351,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+}
+.business-list{
+  text-align: justify;
+  margin-left: 10px;
 }
 
 .main-right {
@@ -292,7 +424,7 @@
 }
 
 .right-img {
-  height: 570px;
+  height: 580px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -373,11 +505,12 @@
 /* Small Phones */
 @media (max-width: 480px) {
 
-  /* .main{
-  margin-right: 20px;
-  } */
+  .main{
+  height: auto;
+  }
   .main-left h1 {
     font-size: 28px;
+    height: auto;
   }
 
   .main-left p {
@@ -390,11 +523,48 @@
   }
 
   .right-img img {
-    max-height: 300px;
+    max-height: 500px;
+  }
+}
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .main {
+    height: auto;         /* content ke हिसाब से height */
+    padding: 25px 15px;   /* थोड़ा compact padding छोटे screen के लिए */
+  }
+
+  .main-left h1 {
+    font-size: 22px;      /* छोटे devices के लिए readable heading */
+    line-height: 1.3;
+    text-align: center;   /* heading को center करें बेहतर look के लिए */
+  }
+
+  .main-left p {
+    font-size: 13px;      /* mobile readable paragraph size */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .left-btn button {
+    height: 40px;
+    font-size: 13px;
+    padding: 6px 14px;
+    display: block;
+    margin: 15px auto 0;  /* button center me aaye */
+  }
+
+  .right-img img {
+    max-height: 320px;    /* छोटे screen पर image proportion control */
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 10px;  /* clean rounded look */
   }
 }
 
 
+ /* =====================code-297================= */
   .home-container {
   font-family: "Poppins", sans-serif;
   text-align: center;
@@ -404,11 +574,12 @@
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, #ed17a5, #b41ac5);
+    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   color: white;
   padding: 100px 20px;
   border-radius: 20px;
-  border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
-   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
   margin-bottom: 60px;
 }
 
@@ -419,6 +590,12 @@
 
 .hero span {
   color: #ffcc00;
+}
+.hero-con li{
+  line-height: 30px;
+  text-align: start;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .btn-primary {
@@ -444,7 +621,7 @@
 .stats-section {
   width: 100%;
   background: linear-gradient(135deg, #2563eb, #9333ea);
-  padding: 80px 5%;
+  padding: 0px 5%;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -560,6 +737,212 @@
     font-size: 1.5rem;
   }
 }
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .stats-section {
+    padding: 40px 5%; /* compact padding for small screens */
+  }
+
+  .stat-card {
+    padding: 20px 15px; /* slightly smaller inner padding */
+    margin-bottom: 15px; /* spacing between cards */
+  }
+
+  .stat-card h3 {
+    font-size: 1.3rem; /* smaller heading for narrow devices */
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .stat-card p {
+    font-size: 0.8rem; /* readable paragraph */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .num {
+    font-size: 1.3rem; /* balanced number size */
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+
+
+
+
+
+/* --- Base Section --- */
+.simple-section1 {
+  width: 100%;
+  max-width: 1350px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: "Poppins", Arial, sans-serif;
+  box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.simple-title1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  font-weight: 700;
+  color: orange;
+  padding: 20px;
+    border: 2px solid #fff;
+  line-height: 1.3;
+}
+
+/* --- Grid Layout --- */
+.cards-wrapper1 {
+  display: grid;
+  justify-content: center;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  /* automatically adjusts across all widths */
+}
+
+/* --- Card Style --- */
+.card1 {
+  /* background: black; */
+    /* border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5); */
+  border-radius: 12px;
+  padding: 22px 18px;
+   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  min-width: 350px;
+  /* background-color: red; */
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+.card-image1{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card-heading1 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.card-text1 {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 16px;
+  flex: 1;
+  line-height: 1.5;
+}
+
+/* --- Button --- */
+.card-btn1 {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #fff;
+  color: orange;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* .card-btn:hover {
+  background: #222;
+  color: #fff;
+} */
+
+/* --- Responsive Tweaks --- */
+
+/* Tablets (max 900px) */
+@media (max-width: 900px) {
+  .simple-title1 {
+    font-size: 1.8rem;
+  }
+  .card1 {
+    padding: 20px;
+  }
+}
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .simple-section1 {
+    padding: 16px;
+  }
+  .simple-title1 {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  .cards-wrapper1 {
+    gap: 18px;
+  }
+  .card1 {
+    padding: 18px;
+  }
+  .card-text1 {
+    font-size: 0.9rem;
+  }
+  .card-btn1 {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very Small Phones (max 480px) */
+@media (max-width: 480px) {
+  .simple-section1 {
+    padding: 12px;
+  }
+  .simple-title1 {
+    font-size: 1.4rem;
+  }
+  .cards-wrapper1 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .card1 {
+    padding: 16px;
+    border-radius: 10px;
+  }
+  .card-heading1 {
+    font-size: 1.1rem;
+  }
+  .card-text1 {
+    font-size: 0.85rem;
+  }
+  .card-btn1 {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ultra Small (320px - old phones) */
+@media (max-width: 360px) {
+  .simple-title1 {
+    font-size: 1.25rem;
+  }
+  .card1 {
+    padding: 14px;
+  }
+  .card-btn1 {
+    width: 100%;
+  }
+}
+
 
 
 /* Features */
@@ -668,6 +1051,207 @@
     font-size: 35px;
   }
 }
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .features {
+    padding: 30px 4%;
+  }
+
+  .features h2 {
+    font-size: 1.6rem;   /* heading थोड़ा छोटा किया गया */
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .features-desc {
+    font-size: 0.9rem;   /* small screen readable text */
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 95%;          /* full width look for small devices */
+    padding: 20px 12px;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;   /* small but bold heading */
+    text-align: center;
+  }
+
+  .card p {
+    font-size: 0.85rem;  /* readable paragraph */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .card .icon {
+    font-size: 28px;     /* balanced icon size for 360px */
+    display: block;
+    margin: 0 auto 10px;
+  }
+}
+
+
+.trusted-section {
+  width: 100%;
+  padding: 60px 20px;
+  /* background: #f8f8f8; */
+  text-align: center;
+}
+
+.trusted-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.trusted-section .intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* ✅ GRID */
+.trusted-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trusted-item {
+  background: #560450;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.trusted-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: yellow;
+}
+
+.trusted-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* ✅ TABLET */
+@media (max-width: 992px) {
+  .trusted-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ✅ MOBILE */
+@media (max-width: 600px) {
+  .trusted-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trusted-section h2 {
+    font-size: 26px;
+  }
+
+  .trusted-section .intro {
+    font-size: 16px;
+  }
+
+  .trusted-item {
+    padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .trusted-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;        /* ✅ cards center me */
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .trusted-section h2 {
+    font-size: 24px;            /* heading thoda chhota */
+  }
+
+  .trusted-section .intro {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .trusted-item {
+    width: 95%;                 /* ✅ card wider and centered */
+    max-width: 400px;
+    padding: 22px 18px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .trusted-item h3 {
+    font-size: 17px;
+  }
+
+  .trusted-item p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 360px) {
+  .trusted-section {
+    padding: 35px 10px;
+  }
+
+  .trusted-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .trusted-section h2 {
+    font-size: 22px;
+  }
+
+  .trusted-section .intro {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .trusted-item {
+    width: 92%;
+    max-width: 340px;
+    padding: 18px 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .trusted-item h3 {
+    font-size: 16px;
+  }
+
+  .trusted-item p {
+    font-size: 13px;
+  }
+}
+
+
 
 
 /* How It Works */
@@ -746,6 +1330,17 @@
   color: #fff;
   line-height: 1.6;
 }
+/* .step1{
+  width: 100%;
+  height: 300px;
+  line-height: 30px;
+  text-align: start;
+  align-items: start;
+  align-self: s;
+} */
+
+  
+  
 
 /* 🔸 Tablet Responsive (max-width: 1024px) */
 @media (max-width: 1024px) {
@@ -818,6 +1413,42 @@
     font-size: 0.9rem;
   }
 }
+@media (max-width: 360px) {
+  .how-it-works {
+    padding: 35px 5%;
+  }
+
+  .how-it-works h2 {
+    font-size: 1.5rem;     /* heading smaller for narrow screen */
+    margin-bottom: 15px;
+  }
+
+  .how-it-works .how-desc {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .step {
+    padding: 20px 15px;     /* slightly tighter padding */
+    margin-bottom: 15px;
+  }
+
+  .icon {
+    font-size: 2rem;        /* smaller icon for compact view */
+    margin-bottom: 8px;
+  }
+
+  .step h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .step p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
 
 
 
@@ -870,8 +1501,8 @@
   font-size: 1.1rem;
   font-weight: 600;
   width: 100%;
-  background-color: orange;
-  color: white;
+  background-color: white;
+  color: black;
   max-width: 320px;
   text-align: center;
   transition: all 0.3s ease-in-out;
@@ -951,6 +1582,49 @@
     padding: 20px 15px;
   }
 }
+@media (max-width: 360px) {
+  .services {
+    padding: 35px 5%;
+  }
+
+  .services h2 {
+    font-size: 1.5rem;        /* heading छोटा किया */
+    margin-bottom: 15px;
+  }
+
+  .services-desc {
+    font-size: 0.85rem;       /* readable text */
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+
+  .service-list {
+    display: grid;
+    grid-template-columns: 1fr; /* single column layout */
+    gap: 15px;                 /* कम spacing ताकि fit हो */
+    width: 100%;
+  }
+
+  .service-card1 {
+    font-size: 0.85rem;
+    padding: 18px 12px;
+    text-align: center;        /* ✅ content center aligned */
+    border-radius: 10px;
+    margin: 0 auto;            /* ✅ ensures center */
+    width: 95%;                /* थोड़ा चौड़ा card look */
+  }
+
+  .service-card1 h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .service-card1 p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+}
+
 
 /* 🔸 Main Section */
 .testimonials {
@@ -1084,6 +1758,43 @@
     font-size: 0.85rem;
   }
 }
+@media (max-width: 360px) {
+  .testimonials {
+    padding: 35px 5%;
+  }
+
+  .testimonials h2 {
+    font-size: 1.5rem;       /* heading smaller for narrow screens */
+    margin-bottom: 20px;
+  }
+
+  .testimonial-list {
+    display: grid;
+    grid-template-columns: 1fr;  /* single column layout */
+    gap: 15px;                   /* compact gap between cards */
+    width: 100%;
+  }
+
+  .testimonial-card {
+    padding: 18px 12px;          /* tighter padding */
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto;              /* ✅ fully centered */
+    width: 95%;                  /* slightly wider card */
+  }
+
+  .testimonial-card p {
+    font-size: 0.85rem;          /* readable paragraph */
+    line-height: 1.5;
+  }
+
+  .testimonial-card span {
+    font-size: 0.75rem;          /* smaller name text */
+    display: block;
+    margin-top: 8px;
+    opacity: 0.9;
+  }
+}
 
 
 /* CTA */
@@ -1108,6 +1819,74 @@
   border-radius: 8px;
   color: white;
   border-color: #9333ea, #2563eb;
+}
+
+/* 💻 Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .cta {
+    padding: 50px 15px;
+    border-radius: 18px;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+
+  .btn-primary1 {
+    width: 140px;
+    height: 42px;
+    font-size: 17px;
+  }
+}
+
+/* 📱 Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .cta {
+    padding: 40px 10px;
+    border-radius: 15px;
+  }
+
+  .cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary1 {
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* 📲 Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .cta {
+    padding: 35px 8px;
+    border-radius: 12px;
+  }
+
+  .cta h2 {
+    font-size: 1.4rem;
+  }
+
+  .cta p {
+    font-size: 0.85rem;
+  }
+
+  .btn-primary1 {
+    width: 120px;
+    height: 38px;
+    font-size: 15px;
+  }
 }
 /* .mid-container{
 
@@ -1237,6 +2016,25 @@
     font-size: 0.9rem;
   }
 }
+@media (max-width: 360px) {
+  .purpose-content h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .purpose-content p,
+  .cta-text {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
+
 
 .media-container {
   display: flex;
@@ -1330,9 +2128,23 @@
   .carousel-card img {
     height: 150px;
   }
-
-  /* =============================================================================== */
 }
+@media (max-width: 360px) {
+  .carousel-card {
+    flex: 0 0 100%; /* 1 card per view */
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .carousel-card img {
+    width: 100%;
+    height: 130px; /* छोटे स्क्रीन के लिए कम height */
+    object-fit: cover; /* image crop ना हो तो contain कर सकते हो */
+    border-radius: 8px;
+    display: block;
+  }
+}
+
 
 /* 🌟 MAIN SECTION */
 .strategy-cards2 {
@@ -1469,13 +2281,32 @@ font-size: 20px;
     font-size: 0.85rem;
   }
 }
+@media (max-width: 360px) {
+  .strategy-cards1 h1 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .strategy-card {
+    width: 95%; /* थोड़ा margin छोड़ो ताकि centered दिखे */
+    margin: 0 auto;
+    padding: 15px 10px;
+  }
+
+  .strategy-title {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+
 
 
 /* =================================================================================== */
 
 .strategy-info-section {
   width: 100%;
-  height: auto; /* fixed height remove ki gayi */
+  height: 450px; /* fixed height remove ki gayi */
     background: linear-gradient(135deg, #2563eb, #9333ea);
    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -1497,6 +2328,7 @@ font-size: 20px;
   flex: 1 1 45%;
   display: flex;
   justify-content: center;
+  /* margin-top: 70px; */
 }
 
 .strategy-info-image img {
@@ -1505,7 +2337,9 @@ font-size: 20px;
   height: 450px;         /* 🔹 height kam ki gayi */
   border-radius: 16px;
   object-fit: contain;
-    box-shadow: 0px 40px 30px -10px rgba(0, 0, 0, 0.4);
+  /* background-color: red; */
+  /* margin-top: 50px; */
+    /* box-shadow: 0px 40px 30px -10px rgba(0, 0, 0, 0.4); */
 }
 
 .strategy-info-content {
@@ -1555,6 +2389,50 @@ color: white;
     font-size: 1rem;
   }
 }
+/* 📱 Mobile Portrait (max-width: 480px) */
+@media (max-width: 480px) {
+  .strategy-info-section {
+    padding: 40px 6%;
+    height: auto;
+  }
+
+  .strategy-info-image img {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .strategy-info-content {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .learn-more-link {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+}
+
+/* 📱 Extra Small Devices (max-width: 360px) */
+@media (max-width: 360px) {
+  .strategy-info-section {
+    padding: 30px 4%;
+  }
+
+  .strategy-info-image img {
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .strategy-info-content {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .learn-more-link {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
 
 
 
@@ -1563,9 +2441,10 @@ color: white;
 
 
 
-/* Container================css- */
+/* Container====================code-739================== */
 .strategy-section {
-  padding: 60px 10%;
+  padding: 0px 10%;
+  height: 640px;
     background: linear-gradient(135deg, #2563eb, #9333ea);
    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
@@ -1659,6 +2538,7 @@ color: white;
 @media (max-width: 480px) {
   .strategy-section {
     padding: 40px 5%;
+    height: auto;
   }
 
   .strategy-section .section-heading {
@@ -1677,17 +2557,48 @@ color: white;
     max-width: 100%;
   }
 }
+@media (max-width: 360px) {
+  .strategy-section {
+    padding: 30px 4%;
+    height: auto;
+  }
+
+  .strategy-section .section-heading {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .strategy-section .text-left .intro-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .strategy-section .bullet-list li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .strategy-section .image-right img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto 0;
+  }
+}
 
 
 
 
 
+/* 🔹 =====================code-768====================== */
 .marketing-section {
   padding: 70px 10%;
    background: linear-gradient(135deg, #2563eb, #9333ea);
    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  height: 800px;
+  height: 730px;
 }
 
 .marketing-section .section-heading {
@@ -1735,6 +2646,10 @@ color: white;
   margin-bottom: 15px;
   color: #fff;
   /* margin-bottom: 50px; */
+}
+.text-right h1{
+  color: white;
+  font-size: 2.5rem;
 }
 .text-right p{
   color: white;
@@ -1811,12 +2726,52 @@ color: white;
     margin-top: 40px;
   }
 }
+@media (max-width: 360px) {
+  .marketing-section {
+    padding: 30px 4%;
+    height: auto;
+  }
+
+  .marketing-section .section-heading {
+    font-size: 1.3rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .marketing-section .text-right .intro-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .marketing-section .bullet-list li {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: start;
+  }
+
+  .marketing-section .image-left img {
+    max-width: 100%;
+    border-radius: 10px;
+    display: block;
+    margin: 15px auto 0;
+  }
+
+  .marketing-section .cta-link {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    margin-top: 30px;
+    display: inline-block;
+  }
+}
 
 
 
 
+/* 🔹 =====================code-805====================== */
 .business-strategy-section {
   position: relative;
+  height: 735px;
   padding: 60px 10%;
   background: linear-gradient(135deg, #2563eb, #9333ea);
   /* fallback border color */
@@ -1957,6 +2912,7 @@ color: white;
 @media (max-width: 480px) {
   .business-strategy-section {
     padding: 40px 5%;
+    height: auto;
   }
 
   .business-strategy-section .content {
@@ -1988,9 +2944,50 @@ color: white;
     font-size: 0.9rem;
   }
 }
+@media (max-width: 360px) {
+  .business-strategy-section {
+    padding: 30px 4%;
+    height: auto;
+  }
+
+  .business-strategy-section .content {
+    flex-direction: column; /* Stack text & image */
+    align-items: center;
+    text-align: center;
+    gap: 18px;
+  }
+
+  .business-strategy-section .text-left h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .business-strategy-section .text-left p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .business-strategy-section .image-right img {
+    width: 100%;
+    max-width: 95%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto 0;
+  }
+
+  .business-strategy-section .text-left .cta-link {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
 
 
 
+/* 🔹 =====================code-847-====================== */
 .gallery-section {
   padding: 60px 2%;
       background: linear-gradient(135deg, #2563eb, #9333ea);
@@ -2064,15 +3061,37 @@ color: white;
     padding: 40px 5%;
   }
 }
+@media (max-width: 360px) {
+  .gallery-section {
+    padding: 30px 4%;
+  }
+
+  .gallery-section .image-item {
+    flex: 1 1 100%;
+    margin-bottom: 15px;
+  }
+
+  .gallery-section .image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* पूरा image दिखे बिना कटे */
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ✅ For devices up to 360px width */
 
 
-
+/* 🔹 =====================code-875====================== */
 .branding-section {
   padding: 20px 10%;
      background: linear-gradient(135deg, #2563eb, #9333ea);
    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
    position: relative;
+   height: 620px;
 }
 
 .branding-section .content {
@@ -2182,6 +3201,7 @@ color: white;
 @media (max-width: 480px) {
   .branding-section {
     padding: 40px 5%;
+    height: auto;
   }
 
   .branding-section .text-left h2 {
@@ -2201,6 +3221,45 @@ color: white;
     font-size: 0.95rem;
   }
 }
+/* ✅ For devices up to 360px width */
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .branding-section {
+    padding: 30px 4%;
+    height: auto; /* fixed height हटाई ताकि content naturally adjust हो */
+  }
+
+  .branding-section .text-left h2 {
+    font-size: 1.2rem;  /* छोटा heading ताकि line break न आए */
+    line-height: 1.4;
+    text-align: center; /* छोटे screens पर center में अच्छा दिखता है */
+  }
+
+  .branding-section .text-left p {
+    font-size: 0.9rem;  /* readable text size */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .branding-section .image-right img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* image center में */
+    border-radius: 10px;
+  }
+
+  .branding-section .text-left .cta-link {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 8px 16px;
+    font-size: 0.85rem; /* mobile friendly button */
+  }
+}
+
+
+
 
 
 
@@ -2210,6 +3269,7 @@ color: white;
    border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
    position: relative;
+   height: 735px;
 }
 
 .flourish-section .content {
@@ -2261,11 +3321,11 @@ color: white;
 }
 
 /* ✅ Mobile Responsive */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .custom-shape-divider-bottom svg {
     height: 50px;
   }
-}
+} */
 
 /* Right Text */
 .flourish-section .text-right {
@@ -2331,6 +3391,7 @@ color: white;
 @media (max-width: 480px) {
   .flourish-section {
     padding: 40px 5%;
+    height: auto;
   }
 
   .flourish-section .text-right h2 {
@@ -2355,4 +3416,39 @@ color: white;
   }
 }
 
+/* ✅ For devices up to 360px width */
+@media (max-width: 360px) {
+  .flourish-section {
+    padding: 30px 4%; /* थोड़ा compact padding */
+  }
+
+  .flourish-section .text-right h2 {
+    font-size: 1.15rem; /* थोड़ा छोटा heading size */
+    margin-bottom: 12px;
+    line-height: 1.4;
+    text-align: center; /* small screens पर heading center में अच्छी लगती है */
+  }
+
+  .flourish-section .text-right p {
+    font-size: 0.85rem; /* mobile readable size */
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .flourish-section .cta-container .cta-link {
+    display: block;
+    width: fit-content;
+    margin: 15px auto 0;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .flourish-section .image-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto; /* image center me aaye */
+  }
+}
 

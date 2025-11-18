@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.govern-container {
+  width: 100%;
+  max-width: 100%;
+  margin: auto;
+  /* padding: 20px; */
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🔷 Banner Section */
+.govern-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 30px;
+  background: #f5f7fa;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.banner-left {
+  flex: 1;
+}
+
+.banner-left h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.banner-left p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.banner-right1 {
+  flex: 1;
+  text-align: right;
+}
+
+.banner-right1 img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+/* 🔷 Content Section */
+.govern-content {
+    padding: 20px;
+  margin-top: 40px;
+}
+
+.govern-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.govern-content p {
+  font-size: 1.1rem;
+  color: #fff;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.govern-content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-top: 25px;
+}
+
+.contact-num {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #1a3c6b;
+}
+
+/* 🔵 FULLY RESPONSIVE */
+@media (max-width: 1024px) {
+  .banner-right1 img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .govern-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner-right1 {
+    text-align: center;
+  }
+
+  .banner-right1 img {
+    width: 80%;
+  }
+
+  .banner-left h1 {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .banner-left p,
+  .govern-content p {
+    font-size: 1rem;
+  }
+
+  .govern-content h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-num {
+    font-size: 1.2rem;
+  }
+}

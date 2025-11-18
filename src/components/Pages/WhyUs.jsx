@@ -9,7 +9,7 @@ const WhyUs = () => {
       <section className="whyus-section1">
         <div className="overlay1">
           <div className="text-container1">
-            <h2>Why Choose BusinessCare </h2>
+            <h2>Why Choose MSME Business Care </h2>
             <p>Business improves the quality of life in two ways. Firstly, it provides high-quality goods and service</p>
             <p>
               At <strong>BusinessCare Advertising</strong>, we combine creativity, strategy, and technology
@@ -33,7 +33,7 @@ const WhyUs = () => {
         transition: "0.4s ease-in-out",
       }}>
         <div className="whyus-container">
-          <h2>Why Choose BusinessCare Advertising?</h2>
+          <h2>Why Choose MSME Business Care Advertising?</h2>
           <p className="intro">
             We combine creativity, strategy, and technology to provide marketing
             solutions that drive growth and build lasting relationships.

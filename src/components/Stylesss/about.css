@@ -303,6 +303,64 @@
     padding: 10px 24px;
   }
 }
+@media (max-width: 480px) {
+  .fixed-bg-section3 {
+    height: 55vh;
+    background-attachment: scroll;
+  }
+
+  .text-content3 {
+    padding-left: 4%;
+  }
+
+  .text-content3 h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-content3 h3 {
+    font-size: 1.2rem;
+  }
+
+  .text-content3 p {
+    font-size: 0.85rem;
+  }
+
+  .cta-btn {
+    font-size: 0.85rem;
+    padding: 9px 22px;
+  }
+}
+
+/* ------------------------------
+   Small mobile up to 360px
+------------------------------ */
+@media (max-width: 360px) {
+  .fixed-bg-section3 {
+    height: 50vh;
+    background-attachment: scroll;
+  }
+
+  .text-content3 {
+    padding-left: 3%;
+  }
+
+  .text-content3 h2 {
+    font-size: 1.4rem;
+  }
+
+  .text-content3 h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-content3 p {
+    font-size: 0.8rem;
+  }
+
+  .cta-btn {
+    font-size: 0.8rem;
+    padding: 8px 20px;
+  }
+}
 
 
 
@@ -469,11 +527,6 @@
     font-size: 0.95rem;
   }
 }
-
-
-
-
-
 
 /* 📱 section 2 ke badd jo section h uski css h  */
 

@@ -5,122 +5,132 @@
   box-sizing: border-box;
 }
 
-.fixed-bg-section {
+/* ✅ MAIN HERO SECTION */
+.awards-hero {
+  width: 100%;
+  min-height: 450px;
+  background-image:url("/public/about/aw1.jpeg"); /* ⭐ Apni image lagaye */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   position: relative;
-  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  background: url('/public/about/a1.jpeg') no-repeat center center;
-  background-size: cover; /* ensures whole image fits */
+  justify-content: center;
 }
 
-/* Optional: fallback for overlay & text */
+/* ✅ OVERLAY */
 .overlay {
-  /* background: rgba(0, 0, 0, 0.5); */
   width: 100%;
   height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 50px;
-  box-sizing: border-box;
 }
 
+/* ✅ TEXT BLOCK */
 .text-content {
+  max-width: 800px;
   color: #fff;
-  padding: 0 50px; /* spacing from left */
-  max-width: 600px; /* control width of text */
+  text-align: center;
+  padding: 0 1rem;
 }
 
-.text-content.left-align {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-justify-content: center;
-/* background-color: red; */
-  text-align: left;
-  line-height: 30px;
-}
-.text-content.left-align h2{
-  font-size: 30px;
-  text-align: justify;
-  width: 600px;
+.text-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
 }
 
-.cta-btn1{
-   text-decoration: none;
-  background: #f7931e;
-  color: #fff;
+.text-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.text-content h3 span {
+  color: orange;
+}
+
+.text-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cta-btn2 {
+  margin-top: 1.2rem;
   padding: 10px 25px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s;
-  display: flex;
-  width: 150px;
- /* margin: auto; */
-}
-/* ✅ 992px Responsive */
-@media (max-width: 992px) {
-  .overlay,
-  .text-content {
-    padding: 0 30px;
-  }
+  border-radius: 8px;
+  background: orange;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000;
 }
 
-/* ✅ 600px Responsive */
-@media (max-width: 600px) {
-  .fixed-bg-section {
-    height: auto;
-    padding: 80px 0;
-  }
 
-  .text-content {
-    max-width: 100%;
-    padding: 0 20px;
-    text-align: center;
+/* ✅ LARGE TABLETS / SMALL LAPTOPS (≤1024px) */
+@media (max-width: 1024px) {
+  .text-content h2 {
+    font-size: 2rem;
   }
-
-  .cta-btn1 {
-    margin: 20px auto 0;
-    justify-content: center;
+  .text-content h3 {
+    font-size: 1.4rem;
   }
 }
 
-/* ✅✅✅ FINAL 480px FULLY RESPONSIVE FIX */
+
+/* ✅ TABLETS (≤768px) */
+@media (max-width: 768px) {
+  .awards-hero {
+    background-attachment: scroll; /* ⭐ Mobile/tablet fixed issue fix */
+    padding: 3rem 1rem;
+  }
+
+  .text-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .text-content p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ✅ MOBILE SCREENS (≤480px) */
 @media (max-width: 480px) {
-
-  .fixed-bg-section {
-    height: 40vh;                          /* ✅ image cut fix */
-    padding: 60px 0;                       /* ✅ spacing balanced */
-    background-size: cover;                /* ✅ full fit */
-    background-position: center;           /* ✅ centered image */
-    background-attachment: scroll !important;
-  }
-
-  .overlay {
-    padding: 0 15px;                       /* ✅ less padding */
-    justify-content: center;
-    text-align: center;
+  .awards-hero {
+    min-height: auto;
+    padding: 2.5rem 1rem;
+    height: 55vh;
   }
 
   .text-content {
-    padding: 0 10px;
-    max-width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 0 5px;
+    text-align: center;
   }
 
-  .text-content.left-align {
-    text-align: center !important;         /* ✅ force center on mobile */
-    font-size: 11px;
+  .text-content h2 {
+    font-size: 1.4rem;
   }
 
-  .cta-btn1 {
-    width: 140px;
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    border-radius: 6px;
-    margin: 20px auto 0;                   /* ✅ center button */
-    justify-content: center;
+  .text-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .text-content p {
+    font-size: 0.92rem;
+  }
+
+  .cta-btn2 {
+    width: 100%;      /* ✅ Full width button for mobile */
+    font-size: 1rem;
   }
 }
 
@@ -275,6 +285,9 @@ text-align: center;
   .zig-right {
     flex-direction: column !important;
     width: 100%;
+  }
+  .text-content left-align h2{
+    font-size: 5px;
   }
 
   .program-card img {

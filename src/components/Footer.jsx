@@ -48,7 +48,7 @@ const Footer = ({ gradient, themeColor }) => {
             <h3>Contact Details</h3>
             <p>📞 <strong>Phone:</strong> +91 7042-438-293</p>
             <p>📧 <strong>Email:</strong> <a href="mailto:Info@businesscare.org.in">Info@businesscare.org.in</a></p>
-            <p>📍 <strong>Address:</strong> A-111, Sec-63, Noida UP-201301</p>
+            {/* <p>📍 <strong>Address:</strong> A-111, Sec-63, Noida UP-201301</p> */}
 
             {/* 🔹 Social Links */}
           <div className="social-links">

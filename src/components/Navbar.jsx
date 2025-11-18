@@ -34,7 +34,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <div style={{ fontSize: "20px", fontWeight: "bold", color: "#fff" }}>
-          Businesscare
+          MSME Business Care
         </div>
 
         {/* Hamburger */}

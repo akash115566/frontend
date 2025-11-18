@@ -1,21 +1,17 @@
 // import React, { useContext } from "react";
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+
 import { ThemeContext } from "../../ThemeContext";
 import "../Stylesss/slide.css";
 
 
- const images = [
-    "/bb1.jpeg",
-    "/bb2.jpeg",
-    "/bb3.jpeg",
-    "/bb4.jpeg",
-    "/bb5.jpeg",
-  ];
 
-  // duplicate to make infinite loop
 
-  const slides = [...images, ...images]; // infinite loop
+
+// duplicate to make infinite loop
+
+// const slides = [...images, ...images]; // infinite loop
 
 
 const statsData = [
@@ -71,6 +67,25 @@ const strategies = [
 ];
 
 const Slide = () => {
+ const [currentIndex, setCurrentIndex] = useState(0);
+  const images = ["/bb7.jpeg", "/bb14.jpeg", "/bb8.jpeg", "/bb9.jpeg", "/bb10.jpeg"];
+  const slideRef = useRef(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+
+
+  //card 6 =========================
+
+
+
+
+
   const { themeColor, gradient } = useContext(ThemeContext);
 
 
@@ -129,9 +144,25 @@ const Slide = () => {
     },
   ];
 
+   const cards = [
+    { id: 1, image: "/bb21.jpg",  title: "Deales & Distribution Enquires Contact our Executive",  link: "/DealersDistribution" },
+    { id: 2,image: "/bb22.jpeg", title: "MSME BUSINESS CARE TV SHOW Partipicipation Contact our Executive", link: "/Msmebusiness" },
+    { id: 3, image: "/bb23.jpeg",title: "government  Schemes Registrations Contact Our Executive",  link: "/GovernmentSchemes" },
+    { id: 4,image: "/bb24.jpeg", title: "Subsidy Benefits Registration Contact Our Executive",  link: "/GovernRegi" },
+    { id: 5,image: "/bb25.jpeg", title: "Meeting With International Deligation Contact Our Executive", link: "/GlobalTrade" },
+    { id: 6,image: "/bb26.jpeg", title: "Trade In OEM Registration Our Executive",  link: "/TradeIn" },
+  ];
+
+
+  
+
 
 
   return (
+
+    <>
+  
+    
     <div
       className="container"
       style={{
@@ -141,9 +172,10 @@ const Slide = () => {
         // padding: "20px",
       }}
     >
+      
 
       {/* 🔹 Stylish Static Banner */}
-            <div className="one-slider">
+      {/* <div className="one-slider">
       <div className="one-track">
         {slides.map((img, i) => (
           <div className="slide-box" key={i}>
@@ -151,34 +183,68 @@ const Slide = () => {
           </div>
         ))}
       </div>
+    </div> */}
+      {/* <div className="ban">
+        <img src="/slide/sl3.png" alt="wave" className="wave1" />
+      </div> */}
+
+ {/* 🔹 =====================css-102====================== */}
+          <div className="slider">
+      <div
+        className="slider-track"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {images.map((src, i) => (
+          <img key={i} src={src} alt={`slide-${i}`} />
+        ))}
+      </div>
     </div>
 
-
-
-
-      {/* <div className="tv-banner">
  
-  <div className="tv-left">
-    <h1>अब टीवी पर प्रचार कराइए <span>Barter</span> के साथ</h1>
-    <p>साझेदारी से आगे बढ़ें — ब्रांड और क्रिएटर एक साथ</p>
-    <button className="tv-btn">अभी संपर्क करें</button>
-  </div>
+ {/* 🔹 =====================css-175====================== */}
+      <div className="tv-banner">
 
-
-  <div className="tv-right">
+          <div className="tv-right">
     <video autoPlay loop muted playsInline className="tv-video">
      <source src="/ani.mp4"  alt="video akash"/>
       आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
     </video>
   </div>
-</div> */}
+        
+ 
+  <div className="tv-left">
+    <h1>
+            MSME Business Care Smarter, <span>Grow Together</span>
+          </h1>
+          <h1>क्या आप एक स्टार्टअप है?<br />क्या आप अपने बिजनेस को बड़ा बनाना चाहते हैं</h1>
+  <p>
+            <ul className="hero-con">
+              <li >बिजनेस की नई ऊंचाइयां छूने के लिए हो जाएं त्यार MSME BUSINESS CARE  के मंच से 140 करोड़ लोगो तक पहुंचाये अपने बिजनेस को
+              </li>
+              <li>FOR REGISTRATIONS CONTACT 7042438293
+              </li>
+              <li>OR EMAIL US -MSMEBUSINESSCARE@GMAIL.COM
+              </li>
+              <li>Get chance to come on AAJTAK CHANNEL Through our Interview Section if u are a MSME , Business / Industrailst / business owner / startup / fmcg company / firm etc
+              </li>
+            </ul>
+          </p>
+    <button className="tv-btn">अभी संपर्क करें</button>
+  </div>
 
 
+
+</div>
+
+
+
+
+ {/* 🔹 =====================css-347====================== */}
       <div className="main">
+        
         <div className="main-left">
           <h2>
-            MEET LIVE WITH INDIA'S CELEBRITY BUSINESS COACHES
-
+           Meet Live with Celebrity Business Consultants & Live Coaches 
             <br /> Mr. Ankur Bansal
             &<br />Ms. Pooja Sharma.
           </h2>
@@ -188,9 +254,29 @@ const Slide = () => {
             Are you a Business Owner Trying to Increase Sales,We
             are Here to Plan your Marketing Strategy
           </p>
+          <p>
+
+
+            <ul className="business-list">
+              <li>
+                Let’s turn your business vision into success — join India’s MSME Business Care
+                TV Show & Business Strategy Partners.
+              </li>
+
+              <li>
+                We don’t believe in sayings. We create success stories.
+              </li>
+
+              <li>
+                More than thousands of MSME businesses going in loss — we support them
+                to perform their business worldwide.
+              </li>
+            </ul>
+
+          </p>
           <div className="left-btn">
-          <Link to="/Founder" > <button >CELEBRITY COACHES</button></Link> 
-          <Link to="/Contact">   <button>FOR APPOINTMENT</button></Link> 
+            <Link to="/Founder" > <button >CELEBRITY COACHES</button></Link>
+            <Link to="/Contact">   <button>FOR APPOINTMENT</button></Link>
           </div>
         </div>
 
@@ -208,7 +294,7 @@ const Slide = () => {
 
 
 
-
+ {/* 🔹 =====================css-568====================== */}
       <div className="home-container">
 
         {/* 🔹 Hero Section */}
@@ -219,7 +305,7 @@ const Slide = () => {
 
             // padding: "20px",
           }}>
-
+ {/* 🔹 =================================css-621================= */}
           <section className="stats-section"
             style={{
               background: gradient || themeColor,   // 🔹 Gradient or Color apply
@@ -227,29 +313,55 @@ const Slide = () => {
 
               // padding: "20px",
             }}>
+              
             <div className="stats-container">
+              
               {statsData.map((stat, index) => (
                 <div key={index} className="stat-card">
+                
 
                   <h3>{stat.value}</h3>
                   <p>{stat.title}</p>
                 </div>
               ))}
             </div>
+
+
           </section>
 
-
-
-          <h1>
-            BusinessCare Smarter, <span>Grow Together</span>
-          </h1>
-          <p>Collaborate, exchange, and build without money.</p>
+    
+          {/* <p>Collaborate, exchange, and build without money.</p> */}
           <button className="btn-primary">Get Started</button>
         </section>
 
-        {/* 🔹 Features Section   =========css-566============== */}
+
+
+{/* 🔹 =====================css-778====================== */}
+
+        <section className="simple-section1"  style={{
+              background: gradient || themeColor,   // 🔹 Gradient or Color apply
+              transition: "0.4s ease-in-out",
+
+              // padding: "20px",
+            }}>
+      <h2 className="simple-title1">For Registration & Participation Enquiry</h2>
+
+      <div className="cards-wrapper1">
+        {cards.map((c) => (
+          <div key={c.id} className="card1">
+            <img src={c.image} alt={c.title} className="card-image1" />
+            <h3 className="card-heading1">{c.title}</h3>
+            <p className="card-text1">{c.text}</p>
+            <Link className="card-btn1" to={c.link}>Open</Link>
+          </div>
+        ))}
+      </div>
+    </section>
+        
+
+        {/* 🔹 Features Section   =========css-949============== */}
         <section className="features">
-          <h2>Why Choose BusinessCare?</h2>
+          <h2>Why Choose MSME Business Care?</h2>
           <p className="features-desc">
             BusinessCare is your trusted partner in growing your business efficiently.
             From expert guidance to cost-effective strategies, here’s why business owners
@@ -281,22 +393,86 @@ const Slide = () => {
               </p>
             </div>
           </div>
+
+{/* 🔹==============================css-1099============================== */}
+
+          <section className="trusted-section">
+            <h3>Trusted Platform for MSME Growth</h3>
+            <p className="intro">
+              We are dedicated to empowering Micro, Small & Medium Enterprises by providing real
+              business exposure, development support, and brand-building opportunities.
+            </p>
+
+            <div className="trusted-grid">
+
+              <div className="trusted-item">
+                <h3>📺 Live TV & Digital Media Reach</h3>
+                <p>
+                  Your business story reaches investors, customers, and industry networks through our
+                  broadcast and digital platforms — giving your brand the visibility it deserves.
+                </p>
+              </div>
+
+              <div className="trusted-item">
+                <h3>🧠 Business Consultation & Strategy Support</h3>
+                <p>
+                  We not only showcase your business — we guide it. Our industry experts help you
+                  structure business models, sales strategies, customer acquisition plans, and market
+                  expansion.
+                </p>
+              </div>
+
+              <div className="trusted-item">
+                <h3>🤝 Verified Networking with Dealers & Distributors</h3>
+                <p>
+                  We connect you with genuine dealers, distributors, suppliers, and channel partners
+                  to grow your business footprint across India.
+                </p>
+              </div>
+
+              <div className="trusted-item">
+                <h3>✅ Brand Authenticity & Trust Building</h3>
+                <p>
+                  Featuring your brand on MSME Business Care creates credibility and trust among your
+                  customers and market competitors.
+                </p>
+              </div>
+
+              <div className="trusted-item">
+                <h3>💰 Affordable & Result-Oriented Growth Solutions</h3>
+                <p>
+                  We understand MSME challenges; hence, our services are designed to be budget-friendly
+                  with measurable outcomes.
+                </p>
+              </div>
+
+              <div className="trusted-item">
+                <h3>📦 End-to-End Support System</h3>
+                <p>
+                  From production, marketing, branding to dealer networking — we manage everything so
+                  you can focus on your business operations smoothly.
+                </p>
+              </div>
+
+            </div>
+          </section>
+
         </section>
 
 
 
 
 
-        {/* 🔹 How It Works===========css-674========== */}
+        {/* 🔹 How It Works===========css-1297========== */}
         <section className="how-it-works" style={{
           background: gradient || themeColor,   // 🔹 Gradient or Color apply
           transition: "0.4s ease-in-out",
 
           // padding: "20px",
         }}>
-          <h2>How BusinessCare Works</h2>
+          <h2>How MSME Business Care Works</h2>
           <p className="how-desc">
-            BusinessCare simplifies your business growth journey. Follow these simple steps to boost your business efficiently.
+            MSME Business Care simplifies your business growth journey. Follow these simple steps to boost your business efficiently.
           </p>
           <div className="steps">
             <div className="step">
@@ -320,10 +496,56 @@ const Slide = () => {
                 Apply our proven strategies to enhance sales, optimize resources, and expand your brand across India.
               </p>
             </div>
+            <div className="step">
+              <h3>Dealers & Distribution</h3>
+              <p >
+                <ul>
+                  <li>WE PROVIDE COMPLETE MARKETING STARTEGY </li>
+                  <li>WE PROVIDE RIGHT DEALERS AND DISTRIBUTORS </li>
+                  {/* <li>WE SUPPORT OUR MSME TO ENHNACE BUSINESS</li>
+                  <li>WE PROVIDE NATIONAL AND INTERNATIONAL LEVEL BUSINESS </li>
+                  <li>WE LAUNCH STARTUP IN OUR TV SHOW </li>
+                  <li>WE MAKE BRANDS
+                  </li> */}
+                </ul>
+              </p>
+              
+            </div>
+             <div className="step">
+              <h3>MSME Business Expansion Support</h3>
+              <p className="step1">
+                <ul>
+                  {/* <li>WE PROVIDE COMPLETE MARKETING STARTEGY </li>
+                  <li>WE PROVIDE RIGHT DEALERS AND DISTRIBUTORS </li> */}
+                  <li>WE SUPPORT OUR MSME TO ENHNACE BUSINESS</li>
+                  <li>WE PROVIDE NATIONAL AND INTERNATIONAL LEVEL BUSINESS </li>
+                  {/* <li>WE LAUNCH STARTUP IN OUR TV SHOW </li>
+                  <li>WE MAKE BRANDS
+                  </li> */}
+                </ul>
+              </p>
+              
+            </div>
+             <div className="step">
+              <h3>Where Startups Become Brands</h3>
+              <p className="step1">
+                <ul>
+                  {/* <li>WE PROVIDE COMPLETE MARKETING STARTEGY </li>
+                  <li>WE PROVIDE RIGHT DEALERS AND DISTRIBUTORS </li>
+                  <li>WE SUPPORT OUR MSME TO ENHNACE BUSINESS</li>
+                  <li>WE PROVIDE NATIONAL AND INTERNATIONAL LEVEL BUSINESS </li> */}
+                  <li>WE LAUNCH STARTUP IN OUR TV SHOW </li>
+                  <li>WE MAKE BRANDS
+                  </li>
+                </ul>
+              </p>
+              
+            </div>
           </div>
+
         </section>
 
-        {/* ============🔹 Popular Services===  css-824==================== */}
+        {/* ============🔹 Popular Services========css-1456================= */}
         <section
           className="services"
           style={{
@@ -344,7 +566,7 @@ const Slide = () => {
           </div>
         </section>
 
-        {/* 🔹 Testimonials */}
+        {/* 🔹 Testimonials =========================css-1630===================*/}
         <section className="testimonials" style={{
           background: gradient || themeColor,   // 🔹 Gradient or Color apply
           transition: "0.4s ease-in-out",
@@ -369,7 +591,7 @@ const Slide = () => {
         </section>
 
 
-        {/* 🔹 Final Call To Action */}
+        {/* 🔹 Final Call To Action ===================css-1486=============*/}
         <section className="cta"
           style={{
             background: gradient || themeColor,   // 🔹 Gradient or Color apply
@@ -378,11 +600,11 @@ const Slide = () => {
             // padding: "20px",
           }}>
           <h2>Ready to Start?</h2>
-        <Link to="/contact">  <button className="btn-primary1">Join Now</button></Link>
+          <Link to="/contact">  <button className="btn-primary1">Join Now</button></Link>
         </section>
       </div>
 
-      {/* <div className="mid-container"> */}
+      {/* ==============================css--1895========="> */}
       <div className="purpose-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -441,9 +663,9 @@ const Slide = () => {
 
         </div>
       </div>
-      
 
-      {/* =====csss=1336==========*/}
+
+      {/* ===================================csss=2136==========*/}
 
       <section className="strategy-cards2" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
@@ -455,11 +677,11 @@ const Slide = () => {
           <h1>MARKETING STRATEGY PROGRAMS</h1>
         </div>
         <div className="strategy-cards-container" style={{
-        background: gradient || themeColor,   // 🔹 Gradient or Color apply
-        transition: "0.4s ease-in-out",
+          background: gradient || themeColor,   // 🔹 Gradient or Color apply
+          transition: "0.4s ease-in-out",
 
-        // padding: "20px",
-      }}>
+          // padding: "20px",
+        }}>
           {strategyItems.map((item, index) => (
             <div className="strategy-card" key={index}>
               <img src={item.img} alt={item.title} />
@@ -479,9 +701,7 @@ const Slide = () => {
 
 
 
-      {/* ===============================================================================*/}
-
-
+      {/* ===============================css-2307================================================*/}
 
       <section className="strategy-info-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
@@ -518,7 +738,7 @@ const Slide = () => {
       </section>
 
 
-   {/*===================css-1563================ */}
+      {/*===================css-2445================ */}
       <section className="strategy-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -548,7 +768,7 @@ const Slide = () => {
 
 
 
-
+{/* 🔹 =====================css-2596====================== */}
       <section className="marketing-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -560,9 +780,10 @@ const Slide = () => {
           <div className="content">
             <div className="image-left">
               <img src="/slide/p3.webp" alt="Marketing Strategy" />
-                                        
+
             </div>
             <div className="text-right">
+              <h1>Ms. Pooja Sharma</h1>
               <p className="intro-text">
                 अब कम खर्चा मुनाफा ज्यादा, कम समय में बनाएं अपने ब्रांड को नंबर 1 ब्रांड
               </p>
@@ -584,7 +805,7 @@ const Slide = () => {
         </div>
       </section>
 
-
+{/* 🔹 =====================css-2772====================== */}
       <section className="business-strategy-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -594,6 +815,7 @@ const Slide = () => {
         <div className="container">
           <div className="content">
             <div className="text-left">
+              <h2>Mr. Ankur Bansal</h2>
               <h2>Business Strategy Planning</h2>
               <p>
                 By understanding the business and understanding the customer of the business, we prepare the business strategy.
@@ -615,7 +837,7 @@ const Slide = () => {
             </div>
             <div className="image-right">
               <img src="/slide/p4.webp" alt="Business Strategy" />
-                  
+
             </div>
           </div>
         </div>
@@ -624,7 +846,7 @@ const Slide = () => {
 
 
 
-   {/*=================css-1960=========== */}
+      {/*===============================css-2991=========================== */}
       <section className="gallery-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -653,7 +875,7 @@ const Slide = () => {
 
 
 
-     {/*=================css-2036=========== */}
+      {/*=================css-3088=========== */}
 
       <section className="branding-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
@@ -664,6 +886,7 @@ const Slide = () => {
         <div className="container">
           <div className="content">
             <div className="text-left">
+              <h2>Ms. Pooja Sharma</h2>
               <h2>Make Your Brand Bigger</h2>
               <p>
                 If you do not do branding in business, how will you make a big brand? Will you tell them to be bigger just by seeing the competitors, or by doing what’s right marketing planning, you will make your brand bigger than them.
@@ -672,7 +895,7 @@ const Slide = () => {
             </div>
             <div className="image-right">
               <img src="/slide/p9.webp" alt="Branding Strategy" />
-                    
+
             </div>
           </div>
         </div>
@@ -680,7 +903,7 @@ const Slide = () => {
 
 
 
-{/*=================css-2144=========== */}
+      {/*==================================css-3266============================= */}
       <section className="flourish-section" style={{
         background: gradient || themeColor,   // 🔹 Gradient or Color apply
         transition: "0.4s ease-in-out",
@@ -691,9 +914,9 @@ const Slide = () => {
           <div className="content">
             <div className="image-left">
               <img src="/slide/p10.webp" alt="Business Flourish" />
-               <div className="custom-shape-divider-bottom">
-    <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-<path d="
+              {/* <div className="custom-shape-divider-bottom">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                  <path d="
 M0,60
 C50,0 300,120 450,60
 C600,0 750,120 900,60
@@ -702,10 +925,11 @@ L1350,220
 L0,220
 Z" />
 
-    </svg>
-  </div>
+                </svg>
+              </div> */}
             </div>
             <div className="text-right">
+              <h2>Mr. Ankur Bansal</h2>
               <h2>Grow Your Business Efficiently</h2>
               <p>
                 Can your business flourish without spending a lot of money?
@@ -736,6 +960,7 @@ Z" />
 
 
     </div>
+    </>
 
 
   );

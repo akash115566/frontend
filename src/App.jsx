@@ -21,6 +21,13 @@ import PolicyPage from "./components/Pages/PolicyPage";
 import SalesPage from "./components/Pages/SalesPage";
 import StrategyPage from "./components/Pages/StrategyPage";
 import Terms from "./components/Pages/Terms";
+import DealersDistribution from "./components/Pages/DealersDistribution";
+import Msmsbusiness from "./components/Pages/Msmebusiness";
+import Msmebusiness from "./components/Pages/Msmebusiness";
+import GovernmentSchemes from "./components/Pages/GovernmentSchemes";
+import GovernRegi from "./components/Pages/GovernRegi";
+import GlobalTrade from "./components/Pages/GlobalTrade";
+import TradeIn from "./components/Pages/TradeIn";
 
 
 
@@ -49,6 +56,12 @@ const App = () => {
              <Route path="/strategyPage" element={<StrategyPage />} />
               <Route path="/salesPage" element={<SalesPage />} />
                 <Route path="/terms" element={<Terms />} />
+                <Route path="/DealersDistribution" element={<DealersDistribution />} />
+                <Route path="/Msmebusiness" element={<Msmebusiness />} />
+                <Route path="/GovernmentSchemes" element={<GovernmentSchemes />} />
+                <Route path="/GovernRegi" element={<GovernRegi />} />
+                <Route path="/GlobalTrade" element={<GlobalTrade />} />
+                <Route path="/TradeIn" element={<TradeIn />} />
          
           {/* <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} /> */}

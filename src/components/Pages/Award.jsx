@@ -86,7 +86,7 @@ const Awards = () => {
   return (
     <>
       {/* 🔹 Hero Section */}
-      <section className="awards-hero fixed-bg-section2">
+      <section className="awards-hero fixed-bg-section">
         <div className="overlay2">
           <div className="text-content">
             <h2>🏆 BusinessCare Awards & Recognition</h2>
@@ -198,7 +198,7 @@ const Awards = () => {
           transition: "0.4s ease-in-out",
         }}>
           <div className="container2">
-            <h2>🏆 BusinessCare Awards & Recognition</h2>
+            <h2>🏆  MSME Business Care Awards & Recognition</h2>
             <p>
               BusinessCare has consistently demonstrated excellence, innovation, and impact in the business
               and marketing industry. Our strategic initiatives and outstanding performance have been

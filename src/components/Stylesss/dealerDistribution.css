@@ -1,0 +1,229 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ===== PAGE CONTAINER ===== */
+/* ===========================
+   PAGE WRAPPER
+=========================== */
+.dealers-page {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 40px;
+  color: white;
+}
+
+/* ===========================
+   BANNER SECTION
+=========================== */
+.dealers-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+ background: linear-gradient(135deg, #6e0d4c, #d1c8da);
+   border: 3px  solid linear-gradient(135deg, #2563eb, #9333ea);
+   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.banner-left {
+  flex: 1;
+  animation: fadeInLeft 0.8s ease-in-out;
+}
+
+.banner-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.banner-left p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.banner-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  animation: fadeInRight 0.8s ease-in-out;
+}
+
+.banner-right img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* ===========================
+   CONTENT SECTION
+=========================== */
+.dealer-section {
+  width: 100%;
+  margin-top: 40px;
+  padding: 40px 5%;
+}
+
+.dealer-container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADINGS */
+.dealer-heading {
+  font-size: 2.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #fff, #cfcfcf);
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.dealer-subheading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.dealer-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  opacity: 0.95;
+}
+
+.dealer-title {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+/* LIST */
+.dealer-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.dealer-list li {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  padding-left: 18px;
+  position: relative;
+}
+
+.dealer-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* FOOTER LINE */
+.dealer-footer {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN (ALL DEVICES)
+=========================== */
+
+/* Laptop & Tablet Landscape */
+@media (max-width: 1024px) {
+  .banner-left h1 {
+    font-size: 2.5rem;
+  }
+  .dealer-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .dealers-banner {
+    padding: 40px 5%;
+    text-align: center;
+  }
+
+  .banner-left,
+  .banner-right {
+    flex: 100%;
+  }
+
+  .banner-left h1 {
+    font-size: 2.2rem;
+  }
+
+  .dealer-heading {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .dealer-subheading,
+  .dealer-text,
+  .dealer-title,
+  .dealer-footer {
+    text-align: center;
+  }
+
+  .dealer-list li {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .banner-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .banner-left p {
+    font-size: 1rem;
+  }
+
+  .dealer-heading {
+    font-size: 1.8rem;
+  }
+
+  .dealer-subheading {
+    font-size: 1.3rem;
+  }
+
+  .dealer-text {
+    font-size: 1rem;
+  }
+
+  .dealer-list li {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  0% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
