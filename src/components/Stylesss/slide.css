@@ -244,7 +244,7 @@
   color: #fff;
   opacity: 0;
   transform: translateX(-40px);
-  animation: slideChange 0.8s ease-out forwards;
+  animation: slideChange 2.5s ease-out forwards;
 }
 
 @keyframes slideChange {

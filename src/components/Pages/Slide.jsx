@@ -159,10 +159,10 @@ const Slide = () => {
   
 
   const texts = [
-    "Are u a startup , Business owner ,Contact-Us -7042438293 ,Email–WWW.MSMEBUSINESS-CARE.COM",
-    "Founder or Msme Company want to show case your success story globally ....",
-    "We will show case you on Aajtak HD In our tv show",
-    "Business care ( उभरता भारत )Contact No - 7042438293",
+    "ARE U A STARTUP,BUSINESS OWNER,Email–WWW.MSMEBUSINESS-CARE.COM",
+    "FOUNDER OR MSME COMPANY WANT TO SHOW CASE YOUR SUCCESS STORY GLOBALLY.....",
+    "WE WILL SHOW CASE YOU ON AAJTAK HD IN OUR TV SHOW",
+    "BUSINESS CARE ( उभरता भारत )CONTACT NO - 7042438293",
     "Email–WWW.MSMEBUSINES-SCARE.COM,WHATSAPP NO – 7042438293 "
   ];
 
@@ -171,7 +171,7 @@ const Slide = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % texts.length);
-    }, 2000); // 2 sec per change
+    }, 4000); // 2 sec per change
 
     return () => clearInterval(interval);
   }, []);
