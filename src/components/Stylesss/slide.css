@@ -308,6 +308,34 @@
     text-align: center;
   }
 }
+@media (max-width: 480px) {
+  .animated-box {
+    width: 100%;
+    padding-left: 25px;
+    height: auto; /* content ko cut hone se bachata hai */
+    margin-left: 0;
+  }
+
+  .change-text {
+    font-size: 20px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 360px) {
+  .animated-box {
+    width: 95%;
+    padding: 20px 15px;
+    height: auto; /* fully auto height */
+    margin-left: 20;
+  }
+
+  .change-text {
+    font-size: 12px;
+    margin-left: 30px;
+  }
+}
+
 
 
 
