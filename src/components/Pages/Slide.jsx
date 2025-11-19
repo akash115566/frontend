@@ -145,13 +145,37 @@ const Slide = () => {
   ];
 
    const cards = [
-    { id: 1, image: "/bb21.jpg",  title: "Deales & Distribution Enquires Contact our Executive",  link: "/DealersDistribution" },
-    { id: 2,image: "/bb22.jpeg", title: "MSME BUSINESS CARE TV SHOW Partipicipation Contact our Executive", link: "/Msmebusiness" },
+    { id: 1, image: "/d19.png",  title: "Deales & Distribution Enquires Contact our Executive",  link: "/DealersDistribution" },
+    { id: 2,image: "/d10.png", title: "MSME BUSINESS CARE TV SHOW Partipicipation Contact our Executive", link: "/Msmebusiness" },
     { id: 3, image: "/bb23.jpeg",title: "government  Schemes Registrations Contact Our Executive",  link: "/GovernmentSchemes" },
     { id: 4,image: "/bb24.jpeg", title: "Subsidy Benefits Registration Contact Our Executive",  link: "/GovernRegi" },
     { id: 5,image: "/bb25.jpeg", title: "Meeting With International Deligation Contact Our Executive", link: "/GlobalTrade" },
     { id: 6,image: "/bb26.jpeg", title: "Trade In OEM Registration Our Executive",  link: "/TradeIn" },
   ];
+
+
+
+
+  
+
+  const texts = [
+    "Are u a startup , Business owner ,Contact-Us -7042438293 ,Email–WWW.MSMEBUSINESS-CARE.COM",
+    "Founder or Msme Company want to show case your success story globally ....",
+    "We will show case you on Aajtak HD In our tv show",
+    "Business care ( उभरता भारत )Contact No - 7042438293",
+    "Email–WWW.MSMEBUSINES-SCARE.COM,WHATSAPP NO – 7042438293 "
+  ];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % texts.length);
+    }, 2000); // 2 sec per change
+
+    return () => clearInterval(interval);
+  }, []);
+
 
 
   
@@ -202,14 +226,17 @@ const Slide = () => {
 
  
  {/* 🔹 =====================css-175====================== */}
-      <div className="tv-banner">
+     <div className="tv-banner">
+     <div className="animated-box">
+      <h1 key={index} className="change-text">
+        {texts[index]}
+      </h1>
+    </div>
 
-          <div className="tv-right">
-    <video autoPlay loop muted playsInline className="tv-video">
-     <source src="/ani.mp4"  alt="video akash"/>
-      आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
-    </video>
-  </div>
+
+
+
+
         
  
   <div className="tv-left">
@@ -352,7 +379,7 @@ const Slide = () => {
             <img src={c.image} alt={c.title} className="card-image1" />
             <h3 className="card-heading1">{c.title}</h3>
             <p className="card-text1">{c.text}</p>
-            <Link className="card-btn1" to={c.link}>Open</Link>
+            <Link className="card-btn1" to={c.link}>More Information</Link>
           </div>
         ))}
       </div>

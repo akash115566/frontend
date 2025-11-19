@@ -90,8 +90,6 @@
 
 
 
-
-
 .main {
   width: 100%;
   display: flex;
@@ -101,7 +99,7 @@
 /* Slider Styles */
 .slider {
   width: 98.8vw;       /* full screen width */
-  height: 580px;      /* fixed height */
+  height: 610px;      /* fixed height */
   overflow: hidden;
   position: relative;
   border-radius: 12px;
@@ -172,166 +170,142 @@
 
 /* 🎯 TV Banner */
 /* 🔹 Main Container */
+/* MAIN BANNER CONTAINER */
 .tv-banner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 60px 2%;
-  background: linear-gradient(135deg, #3b0a91, #6c2bd9);
-  color: #fff;
-  min-height: 100vh;
+  align-items: center;
+  padding: 40px 30px;
+  gap: 40px;
+  width: 100%;
   box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
-/* 🔹 Left Section */
+/* LEFT SIDE */
 .tv-left {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20px;
+  flex: 1;
+  color: #fff;
 }
 
 .tv-left h1 {
-  font-size: 2.8rem;
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
   line-height: 1.3;
-  font-weight: 700;
 }
 
 .tv-left h1 span {
-  color: #ffd700; /* gold accent */
+  color: #00d9ff;
 }
 
 .tv-left p {
-  font-size: 1.2rem;
-  color: #e4e4e4;
+  margin-top: 10px;
+}
+
+.hero-con li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .tv-btn {
-  background: #ffd700;
-  color: #3b0a91;
-  border: none;
+  margin-top: 25px;
+  background: #00aaff;
+  color: #fff;
   padding: 14px 28px;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  width: fit-content;
+  transition: 0.3s;
 }
 
 .tv-btn:hover {
-  background: #fff;
-  color: #3b0a91;
-  transform: scale(1.05);
+  background: #0088cc;
 }
 
-/* 🔹 Right Section */
-.tv-right {
-  flex: 1 1 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* RIGHT SIDE (Animated Heading Box) */
+.animated-box {
+  border: 3px solid white;
+  border-radius: 9px ;
+  text-align: left;
+  padding: 40px 50px;
+  width: 50%;
+  overflow: hidden;
+  margin-left: 20px;
+  height: 340px; /* fix height for smooth transition */
 }
 
-.tv-video {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+.change-text {
+  font-size: 38px;
+  font-weight: 800;
+  color: #fff;
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideChange 0.8s ease-out forwards;
 }
 
-/* 🔹 Responsive Design */
+@keyframes slideChange {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px) scale(0.95);
+    filter: blur(6px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* RESPONSIVE FOR TABLET */
 @media (max-width: 1024px) {
   .tv-banner {
-    padding: 50px 5%;
+    padding: 30px 20px;
+  }
+
+  .ani-line {
+    font-size: 30px;
   }
 
   .tv-left h1 {
-    font-size: 2.4rem;
-  }
-
-  .tv-left p {
-    font-size: 1.1rem;
+    font-size: 28px;
   }
 }
 
+/* RESPONSIVE FOR MOBILE */
 @media (max-width: 768px) {
   .tv-banner {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
 
-  .tv-left {
-    flex: 1 1 100%;
-    align-items: center;
+  .tv-left,
+  .ani-text-box {
+    width: 100%;
   }
 
-  .tv-right {
-    flex: 1 1 100%;
-    margin-top: 30px;
-  }
-
-  .tv-video {
-    max-width: 400px;
+  .ani-line {
+    font-size: 26px;
   }
 
   .tv-left h1 {
-    font-size: 2rem;
+    font-size: 24px;
   }
 
-  .tv-left p {
-    font-size: 1rem;
+  .hero-con li {
+    font-size: 16px;
   }
 
   .tv-btn {
-    padding: 12px 22px;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .tv-banner {
-    padding: 40px 20px;
-  }
-
-  .tv-left h1 {
-    font-size: 1.6rem;
-  }
-
-  .tv-left p {
-    font-size: 0.9rem;
-  }
-
-  .tv-video {
-    max-width: 320px;
-  }
-}
-/* ✅ For devices up to 360px width */
-@media (max-width: 360px) {
-  .tv-banner {
-    padding: 30px 15px; /* थोड़ा compact padding */
-  }
-
-  .tv-left h1 {
-    font-size: 1.3rem; /* छोटे screens पर perfect heading size */
-    line-height: 1.4;
-    text-align: center; /* center alignment better look देता है */
-  }
-
-  .tv-left p {
-    font-size: 0.85rem; /* readable small screen font */
-    line-height: 1.5;
-    text-align: center;
-  }
-
-  .tv-video {
-    max-width: 280px;  /* छोटे screen के हिसाब से video size */
     width: 100%;
-    margin: 0 auto;    /* center me video */
-    display: block;
-    border-radius: 10px;
+    text-align: center;
   }
 }
 
