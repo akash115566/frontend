@@ -86,9 +86,9 @@ const Awards = () => {
   return (
     <>
       {/* 🔹 Hero Section */}
-      <section className="awards-hero fixed-bg-section">
+      <section className="awards-hero fixed-bg-section2">
         <div className="overlay2">
-          <div className="text-content">
+          <div className="text-content2">
             <h2>🏆 BusinessCare Awards & Recognition</h2>
             <h3>
               Celebrating Excellence in <span>Business & Marketing</span>
@@ -102,13 +102,13 @@ const Awards = () => {
         </div>
 
         {/* 🔹 Wave Shape Divider */}
-        <div className="wave-divider">
+        {/* <div className="wave-divider">
           <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M0,0 C300,100 900,0 1200,80 L1200,120 L0,120 Z" fill="#fdfaf6" />
             <path d="M0,0 C400,120 800,0 1200,60 L1200,120 L0,120 Z" fill="#f9f4ef" opacity="0.7" />
             <path d="M0,0 C500,80 700,0 1200,40 L1200,120 L0,120 Z" fill="#fdfaf6" opacity="0.5" />
           </svg>
-        </div>
+        </div> */}
       </section>
 
       {/* 🔹 Awards List Section */}
