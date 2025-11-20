@@ -132,7 +132,7 @@
 /* 📱 SMALL MOBILE (360px - 480px) */
 @media (max-width: 480px) {
   .fixed-bg-section2 {
-    height: 70vh;
+    height: 90vh;
     padding: 15px;
   }
 
