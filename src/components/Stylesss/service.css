@@ -222,9 +222,11 @@ text-align: center;
   gap: 40px;
   background: linear-gradient(135deg, #2563eb, #9333ea);
   border-radius: 12px;
-  padding: 20px;
+  padding: 0px;
   flex-wrap: wrap;   /* Important */
   width: 100%;
+ border-bottom: 3px solid black;
+
 }
 
 /* Image */
@@ -269,6 +271,7 @@ text-align: center;
   .program-card {
     flex-direction: column !important;
     text-align: center;
+    
   }
 
   .program-card img {
@@ -285,6 +288,7 @@ text-align: center;
   .zig-right {
     flex-direction: column !important;
     width: 100%;
+   
   }
   .text-content left-align h2{
     font-size: 5px;
@@ -295,6 +299,17 @@ text-align: center;
     height: auto !important;
     object-fit: contain;
   }
+  .img-wrap {
+  width: 100%;
+  max-width: 400px;
+  border-bottom: 3px solid black;   /* ⭐ Only image ke niche */
+}
+.img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 
   .program-content {
     width: 100% !important;

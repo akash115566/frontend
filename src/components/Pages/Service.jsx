@@ -131,10 +131,7 @@ const Service = () => {
             background: gradient || themeColor,
             transition: "0.4s ease-in-out",
           }}>
-            <img
-              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.28.24.png"
-              alt="New Startup Marketing Strategy"
-            />
+            
             <div className="program-content"  style={{
           background: gradient || themeColor,
           transition: "0.4s ease-in-out",
@@ -148,16 +145,22 @@ const Service = () => {
                 CALL NOW
               </Link>
             </div>
+
+            <img
+              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.28.24.png"
+              alt="New Startup Marketing Strategy"
+            />
+
+
+
+
           </div>
 
           <div className="program-card zig-right" style={{
             background: gradient || themeColor,
             transition: "0.4s ease-in-out",
           }}>
-            <img
-              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.20.19-e1681987481804.png"
-              alt="Old Business Growth Strategy"
-            />
+           
             <div className="program-content"  style={{
           background: gradient || themeColor,
           transition: "0.4s ease-in-out",
@@ -171,16 +174,22 @@ const Service = () => {
                 CALL NOW
               </Link>
             </div>
+
+             <img
+              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.20.19-e1681987481804.png"
+              alt="Old Business Growth Strategy"
+            />
+
+
+
+
           </div>
 
           <div className="program-card zig-left" style={{
             background: gradient || themeColor,
             transition: "0.4s ease-in-out",
           }}>
-            <img
-              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.24.03.png"
-              alt="How to Target Your Audience"
-            />
+           
             <div className="program-content"  style={{
           background: gradient || themeColor,
           transition: "0.4s ease-in-out",
@@ -194,16 +203,23 @@ const Service = () => {
                 CALL NOW
               </Link>
             </div>
+
+             <img
+              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.24.03.png"
+              alt="How to Target Your Audience"
+            />
+
+
+
+
+
           </div>
 
           <div className="program-card zig-right" style={{
             background: gradient || themeColor,
             transition: "0.4s ease-in-out",
           }}>
-            <img
-              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.19.05.png"
-              alt="How to Grow Your Sales"
-            />
+            
             <div className="program-content"  style={{
           background: gradient || themeColor,
           transition: "0.4s ease-in-out",
@@ -217,6 +233,14 @@ const Service = () => {
                 CALL NOW
               </Link>
             </div>
+
+            <img
+              src="https://businesscare.org.in/wp-content/uploads/2023/04/WhatsApp-Image-2023-04-04-at-15.19.05.png"
+              alt="How to Grow Your Sales"
+            />
+
+
+
           </div>
         </div>
       </section>
