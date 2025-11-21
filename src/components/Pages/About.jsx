@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import { Link } from "react-router-dom";
 import "../Stylesss/about.css";
 import { FaHandshake, FaLightbulb, FaChartLine, FaMoneyCheckAlt } from "react-icons/fa";
 
@@ -43,7 +44,7 @@ const About = () => {
               आधुनिक मार्केटिंग के नए दौर में, हम आपके ब्रांड को सही दिशा, सही ऑडियंस और
               स्मार्ट ग्रोथ स्ट्रैटेजी के साथ आगे बढ़ाते हैं।
             </p>
-            <button className="cta-btn">Get Started</button>
+          <Link to="/Contact"> <button className="cta-btn">Get Started</button></Link>
           </div>
         </div>
       </section>
@@ -283,7 +284,7 @@ const About = () => {
               Your goals are unique — and so is our strategy. Let’s take your business to the next
               level together.
             </p>
-            <button className="cta-btn">Watch Story</button>
+           <Link to="/Contact"> <button className="cta-btn">Contact Us</button></Link>
           </div>
         </section>
       </div>

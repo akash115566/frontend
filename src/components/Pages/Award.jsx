@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import { Link } from "react-router-dom";
 import "../Stylesss/award.css";
 
 const Awards = () => {
@@ -97,7 +98,7 @@ const Awards = () => {
               BusinessCare’s journey of innovation, impact, and strategic excellence has been
               recognized across multiple prestigious awards in India and globally.
             </p>
-            <button className="cta-btn">Explore Awards</button>
+          <Link to="/Contact">  <button className="cta-btn">Explore Awards</button></Link>
           </div>
         </div>
 

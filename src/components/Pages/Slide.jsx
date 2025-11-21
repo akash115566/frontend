@@ -159,11 +159,11 @@ const Slide = () => {
   
 
   const texts = [
-    "ARE U A STARTUP,BUSINESS OWNER,Email–WWW.MSMEBUSINESS-CARE.COM",
+    "ARE U A STARTUP,BUSINESS OWNER",
     "FOUNDER OR MSME COMPANY WANT TO SHOW CASE YOUR SUCCESS STORY GLOBALLY.....",
     "WE WILL SHOW CASE YOU ON AAJTAK HD IN OUR TV SHOW",
-    "BUSINESS CARE ( उभरता भारत )CONTACT NO - 7042438293",
-    "Email–WWW.MSMEBUSINES-SCARE.COM,WHATSAPP NO – 7042438293 "
+    "BUSINESS CARE (Ubharta bharat)CONTACT NO - 7042438293",
+    "Email–WWW.MSMEBUSINESSCARE.COM,-WHATSAPP NO – 7042438293 "
   ];
 
   const [index, setIndex] = useState(0);
@@ -256,7 +256,7 @@ const Slide = () => {
               </li>
             </ul>
           </p>
-    <button className="tv-btn">अभी संपर्क करें</button>
+   <Link to="/Contact">  <button className="tv-btn">अभी संपर्क करें</button></Link>
   </div>
 
 
@@ -358,7 +358,7 @@ const Slide = () => {
 
     
           {/* <p>Collaborate, exchange, and build without money.</p> */}
-          <button className="btn-primary">Get Started</button>
+         <Link to="/Contact"> <button className="btn-primary">Get Started</button></Link>
         </section>
 
 

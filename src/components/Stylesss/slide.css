@@ -235,11 +235,11 @@
   width: 50%;
   overflow: hidden;
   margin-left: 20px;
-  height: 340px; /* fix height for smooth transition */
+  height: 240px; /* fix height for smooth transition */
 }
 
 .change-text {
-  font-size: 38px;
+  font-size: 28px;
   font-weight: 800;
   color: #fff;
   opacity: 0;

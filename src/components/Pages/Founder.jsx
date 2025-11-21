@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../ThemeContext";
+import { Link } from "react-router-dom";
 import "../Stylesss/founder.css";
 
 const Founder = () => {
@@ -33,7 +34,7 @@ const Founder = () => {
                 years.
               </p>
 
-              <button className="founder-btn">Learn More</button>
+             <Link to="/Contact"> <button className="founder-btn">Learn More</button></Link>
             </div>
 
 
@@ -90,7 +91,7 @@ const Founder = () => {
               </p>
 
 
-              <button className="founder-btn">Learn More</button>
+             <Link to="/Contact"> <button className="founder-btn">Learn More</button></Link>
             </div>
           </div>
         </div>
