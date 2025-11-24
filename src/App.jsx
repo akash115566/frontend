@@ -28,6 +28,7 @@ import GovernmentSchemes from "./components/Pages/GovernmentSchemes";
 import GovernRegi from "./components/Pages/GovernRegi";
 import GlobalTrade from "./components/Pages/GlobalTrade";
 import TradeIn from "./components/Pages/TradeIn";
+import Counter from "./components/Pages/Counter";
 
 
 
@@ -62,6 +63,7 @@ const App = () => {
                 <Route path="/GovernRegi" element={<GovernRegi />} />
                 <Route path="/GlobalTrade" element={<GlobalTrade />} />
                 <Route path="/TradeIn" element={<TradeIn />} />
+                <Route path="/counter" element={<Counter target={100} duration={3000} />} />
          
           {/* <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} /> */}

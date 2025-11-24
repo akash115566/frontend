@@ -1,6 +1,7 @@
 // import React, { useContext } from "react";
 import React, { useState, useEffect, useRef, useContext } from "react";
 import { Link } from "react-router-dom";
+import Counter from "./Counter";
 
 import { ThemeContext } from "../../ThemeContext";
 import "../Stylesss/slide.css";
@@ -15,20 +16,10 @@ import "../Stylesss/slide.css";
 
 
 const statsData = [
-  {
-    title: "Real Estate Project Done",
-    value: "250+",
-  },
-  {
-    title: "FMCG Startup Project Done",
-    value: "180+",
-  },
-  {
-    title: "Pan India Clients",
-    value: "300+",
-  },
+  { title: "Real Estate Project Done", value: "250+" },
+  { title: "FMCG Startup Project Done", value: "180+" },
+  { title: "Pan India Clients", value: "300+" },
 ];
-
 
 
 
@@ -159,11 +150,11 @@ const Slide = () => {
   
 
   const texts = [
-    "ARE U A STARTUP,BUSINESS OWNER",
+    "ARE U A STARTUP,  BUSINESS OWNER",
     "FOUNDER OR MSME COMPANY WANT TO SHOW CASE YOUR SUCCESS STORY GLOBALLY.....",
     "WE WILL SHOW CASE YOU ON AAJTAK HD IN OUR TV SHOW",
-    "BUSINESS CARE (Ubharta bharat)CONTACT NO - 7042438293",
-    "Email–WWW.MSMEBUSINESSCARE.COM,-WHATSAPP NO – 7042438293 "
+    "MEMEBUSINESSCARE  WEBSITE (Ubharta bharat) CONTACT NO - 7042438293",
+    "Email-wwwbusinesscare.com, -WHATSAPP NO – 7042438293 "
   ];
 
   const [index, setIndex] = useState(0);
@@ -176,6 +167,8 @@ const Slide = () => {
     return () => clearInterval(interval);
   }, []);
 
+
+  const [hover, setHover] = useState(false);
 
 
   
@@ -333,28 +326,27 @@ const Slide = () => {
             // padding: "20px",
           }}>
  {/* 🔹 =================================css-621================= */}
-          <section className="stats-section"
-            style={{
-              background: gradient || themeColor,   // 🔹 Gradient or Color apply
-              transition: "0.4s ease-in-out",
+    <section
+      className="stats-section"
+      style={{
+        background: gradient || themeColor,
+        transition: "0.4s ease-in-out",
+      }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <div className="stats-container">
+        {statsData.map((stat, index) => (
+          <div key={index} className="stat-card">
+            <h3>
+              <Counter target={stat.value} start={hover} />
+            </h3>
+            <p>{stat.title}</p>
+          </div>
+        ))}
+      </div>
+    </section>
 
-              // padding: "20px",
-            }}>
-              
-            <div className="stats-container">
-              
-              {statsData.map((stat, index) => (
-                <div key={index} className="stat-card">
-                
-
-                  <h3>{stat.value}</h3>
-                  <p>{stat.title}</p>
-                </div>
-              ))}
-            </div>
-
-
-          </section>
 
     
           {/* <p>Collaborate, exchange, and build without money.</p> */}
@@ -390,17 +382,18 @@ const Slide = () => {
         <section className="features">
           <h2>Why Choose MSME Business Care?</h2>
           <p className="features-desc">
-            BusinessCare is your trusted partner in growing your business efficiently.
-            From expert guidance to cost-effective strategies, here’s why business owners
-            rely on us:
+         MSME Business Care is the first exclusive global platform specially designed for business owners and founders to collaborate, connect, and expand their ventures. Through msmebusinesscare.com, entrepreneurs access a unique single-window global ecosystem where they can showcase their businesses, success stories, and achievements on national TV channels—providing unmatched visibility and brand credibility.
+
+One of the most prestigious features of this platform is that it is the first platform where business owners can showcase their success stories through exclusive interviews hosted by very famous celebrity hosts, giving them star-level exposure and industry recognition.
+     <h2>Key Benefits of Choosing MSME Business Care:</h2>
           </p>
           <div className="feature-cards">
             <div className="card">
               <div className="icon">💡</div>
-              <h3>Save Money</h3>
+              <h3> Dealer & Distributor Partnerships </h3>
               <p>
-                Optimize your resources and maximize ROI with smart, low-cost strategies
-                tailored for your business.
+       Enables rapid business expansion through verified national and international partners.
+
               </p>
             </div>
             <div className="card">
@@ -411,14 +404,64 @@ const Slide = () => {
                 business practices and expert consulting.
               </p>
             </div>
-            <div className="card">
-              <div className="icon">🚀</div>
-              <h3>Grow Faster</h3>
-              <p>
-                Accelerate your growth with actionable insights, marketing strategies,
-                and business coaching from industry experts.
-              </p>
-            </div>
+           <div className="card">
+  <div className="icon">🚀</div>
+  <h3>Grow Faster</h3>
+  <p>
+    Accelerate your growth with actionable insights, marketing strategies,
+    and business coaching from industry experts.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">💡</div>
+  <h3>Smart Branding</h3>
+  <p>
+    Valuable Branding at Pocket-Friendly Costs – High-impact branding designed to save on marketing budgets.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">📺</div>
+  <h3>Digital & OTT Branding</h3>
+  <p>
+    Ensures wide digital reach through top OTT and online platforms.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">📈</div>
+  <h3>Grow Faster</h3>
+  <p>
+    Accelerate your growth with actionable insights, marketing strategies,
+    and business coaching from industry experts.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">🎬</div>
+  <h3>Cinema, TV, FM, Hoardings & 360° Branding</h3>
+  <p>
+    Complete multimedia marketing solutions across all major channels.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">🏛️</div>
+  <h3>Government Schemes Awareness</h3>
+  <p>
+    Regular updates and guidance on business-related government schemes and subsidies.
+  </p>
+</div>
+
+<div className="card">
+  <div className="icon">🌍</div>
+  <h3>Global Setup Support for Startups</h3>
+  <p>
+    Helps new businesses build and expand their presence in global markets.
+  </p>
+</div>
+
           </div>
 
 {/* 🔹==============================css-1099============================== */}
