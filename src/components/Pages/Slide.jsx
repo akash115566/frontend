@@ -154,7 +154,7 @@ const Slide = () => {
     "FOUNDER OR MSME COMPANY WANT TO SHOW CASE YOUR SUCCESS STORY GLOBALLY.....",
     "WE WILL SHOW CASE YOU ON AAJTAK HD IN OUR TV SHOW",
     "MEMEBUSINESSCARE  WEBSITE (Ubharta bharat) CONTACT NO - 7042438293",
-    "Email-wwwbusinesscare.com, -WHATSAPP NO – 7042438293 "
+    "Website:-wwwbusinesscare.com, -Contact NO :– 7042438293 "
   ];
 
   const [index, setIndex] = useState(0);
@@ -385,10 +385,10 @@ const Slide = () => {
          MSME Business Care is the first exclusive global platform specially designed for business owners and founders to collaborate, connect, and expand their ventures. Through msmebusinesscare.com, entrepreneurs access a unique single-window global ecosystem where they can showcase their businesses, success stories, and achievements on national TV channels—providing unmatched visibility and brand credibility.
 
 One of the most prestigious features of this platform is that it is the first platform where business owners can showcase their success stories through exclusive interviews hosted by very famous celebrity hosts, giving them star-level exposure and industry recognition.
-     <h2>Key Benefits of Choosing MSME Business Care:</h2>
+     <h4>Key Benefits of Choosing MSME Business Care:</h4>
           </p>
           <div className="feature-cards">
-            <div className="card">
+            {/* <div className="card">
               <div className="icon">💡</div>
               <h3> Dealer & Distributor Partnerships </h3>
               <p>
@@ -411,7 +411,7 @@ One of the most prestigious features of this platform is that it is the first pl
     Accelerate your growth with actionable insights, marketing strategies,
     and business coaching from industry experts.
   </p>
-</div>
+</div> */}
 
 <div className="card">
   <div className="icon">💡</div>
