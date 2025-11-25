@@ -180,16 +180,7 @@ const Slide = () => {
     <>
   
     
-    <div
-      className="container"
-      style={{
-        background: gradient || themeColor,   // 🔹 Gradient or Color apply
-        transition: "0.4s ease-in-out",
-        minHeight: "100vh",
-        // padding: "20px",
-      }}
-    >
-      
+  
 
       {/* 🔹 Stylish Static Banner */}
       {/* <div className="one-slider">
@@ -243,7 +234,7 @@ const Slide = () => {
               </li>
               <li>FOR REGISTRATIONS CONTACT 7042438293
               </li>
-              <li>OR EMAIL US -MSMEBUSINESSCARE@GMAIL.COM
+              <li>Email:-msmebusinesscare.com
               </li>
               <li>Get chance to come on AAJTAK CHANNEL Through our Interview Section if u are a MSME , Business / Industrailst / business owner / startup / fmcg company / firm etc
               </li>
@@ -317,13 +308,13 @@ const Slide = () => {
  {/* 🔹 =====================css-568====================== */}
       <div className="home-container">
 
-        {/* 🔹 Hero Section */}
+      
         <section className="hero"
           style={{
-            background: gradient || themeColor,   // 🔹 Gradient or Color apply
+            background: gradient || themeColor,   
             transition: "0.4s ease-in-out",
 
-            // padding: "20px",
+            
           }}>
  {/* 🔹 =================================css-621================= */}
     <section
@@ -1029,7 +1020,7 @@ Z" />
 
 
 
-    </div>
+  
     </>
 
 
