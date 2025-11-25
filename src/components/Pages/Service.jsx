@@ -63,7 +63,7 @@ const Service = () => {
               excellence has been recognized across multiple prestigious awards
               in India and globally.
             </p>
-          <Link to="/Contact">  <button className="cta-btn2">Explore Awards</button></Link>
+          {/* <Link to="/Contact">  <button className="cta-btn2">Explore Awards</button></Link> */}
           </div>
         </div>
       </section>

@@ -98,7 +98,7 @@ const Awards = () => {
               BusinessCare’s journey of innovation, impact, and strategic excellence has been
               recognized across multiple prestigious awards in India and globally.
             </p>
-          <Link to="/Contact">  <button className="cta-btn">Explore Awards</button></Link>
+          {/* <Link to="/Contact">  <button className="cta-btn">Explore Awards</button></Link> */}
           </div>
         </div>
 

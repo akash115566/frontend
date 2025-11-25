@@ -104,7 +104,7 @@
   /* FIXED BG DISABLED → mobile compatible */
   .gallery-hero {
     background-attachment: scroll !important;
-    height: 40vh;
+    height: 65vh;
   }
 
   .gallery-hero .overlay {

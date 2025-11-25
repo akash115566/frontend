@@ -40,15 +40,15 @@ const Contact = () => {
               next project? Our team is here to guide you with the right marketing
               and business strategies.
             </p>
-            <p>
+            {/* <p>
               📞 Call us: <strong>+91 98765 43210</strong><br />
               📧 Email: <strong>support@businesscare.in</strong>
-            </p>
+            </p> */}
             <p>
               Visit our office or fill out the contact form — we’ll get in touch
               to boost your business growth journey!
             </p>
-           <Link to="/Contact"><button className="contact-btn">Get In Touch</button></Link> 
+          
           </div>
         </div>
       </section>

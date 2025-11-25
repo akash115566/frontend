@@ -89,6 +89,7 @@
     background-attachment: scroll; /* improve performance on mobile */
     background-position: center;
     min-height: 100px;
+    height: 65vh;
   }
 
   .contact-overlay {
