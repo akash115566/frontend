@@ -18,7 +18,7 @@ function GovernmentSchemes() {
 
         {/* RIGHT IMAGE */}
         <div className="gs-banner-right">
-          <img src="/d7.jpeg" alt="Government Schemes" />
+          <img src="/bb28.jpeg" alt="Government Schemes" />
         </div>
       </div>
 

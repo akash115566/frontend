@@ -137,7 +137,7 @@ const Slide = () => {
 
    const cards = [
     { id: 1, image: "/d19.png",  title: "Deales & Distribution Enquires Contact our Executive",  link: "/DealersDistribution" },
-    { id: 2,image: "/d10.png", title: "MSME BUSINESS CARE TV SHOW Partipicipation Contact our Executive", link: "/Msmebusiness" },
+    { id: 2,image: "/bb27.jpeg", title: "MSME BUSINESS CARE TV SHOW Partipicipation Contact our Executive", link: "/Msmebusiness" },
     { id: 3, image: "/bb23.jpeg",title: "government  Schemes Registrations Contact Our Executive",  link: "/GovernmentSchemes" },
     { id: 4,image: "/bb24.jpeg", title: "Subsidy Benefits Registration Contact Our Executive",  link: "/GovernRegi" },
     { id: 5,image: "/bb25.jpeg", title: "Meeting With International Deligation Contact Our Executive", link: "/GlobalTrade" },
@@ -230,7 +230,7 @@ const Slide = () => {
           <h1>क्या आप एक स्टार्टअप है?<br />क्या आप अपने बिजनेस को बड़ा बनाना चाहते हैं</h1>
   <p>
             <ul className="hero-con">
-              <li >बिजनेस की नई ऊंचाइयां छूने के लिए हो जाएं त्यार MSME BUSINESS CARE  के मंच से 140 करोड़ लोगो तक पहुंचाये अपने बिजनेस को
+              <li >बिजनेस की नई ऊंचाइयां छूने के लिए हो जाएं तैयार MSME BUSINESS CARE  के मंच से 140 करोड़ लोगो तक पहुंचाये अपने बिजनेस को
               </li>
               <li>FOR REGISTRATIONS CONTACT 7042438293
               </li>
@@ -624,6 +624,9 @@ One of the most prestigious features of this platform is that it is the first pl
             <div className="service-card1">💡 Marketing & Branding</div>
             <div className="service-card1">🤝 Business Consultation</div>
             <div className="service-card1">🚀 Sales Growth & Optimization</div>
+              <div className="service-card1">🎬 TV Ad Film Making & TV Advertising</div>
+  <div className="service-card1">📻 FM Advertising</div>
+  <div className="service-card1">🎥 PVR Cinema Advertising</div>
           </div>
         </section>
 

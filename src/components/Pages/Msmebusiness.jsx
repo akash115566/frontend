@@ -29,7 +29,7 @@ function MsmeBusiness() {
 
         {/* RIGHT SIDE IMAGE */}
         <div className="top-banner-right">
-          <img src="/bb22.jpeg" alt="MSME Banner" />
+          <img src="/bb27.jpeg" alt="MSME Banner" />
         </div>
 
       </div>

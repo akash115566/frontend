@@ -29,21 +29,23 @@
    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.banner-left {
+.banner-left5 {
   flex: 1;
   animation: fadeInLeft 0.8s ease-in-out;
 }
 
-.banner-left h1 {
+.banner-left5 h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 15px;
+  color: white;
 }
 
-.banner-left p {
+.banner-left5 p {
   font-size: 1.2rem;
   line-height: 1.7;
   opacity: 0.9;
+  color: white;
   max-width: 600px;
 }
 
@@ -56,7 +58,7 @@
 
 .banner-right img {
   width: 100%;
-  max-width: 450px;
+  max-width: 350px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
@@ -142,7 +144,7 @@
 
 /* Laptop & Tablet Landscape */
 @media (max-width: 1024px) {
-  .banner-left h1 {
+  .banner-left5 h1 {
     font-size: 2.5rem;
   }
   .dealer-heading {
@@ -157,7 +159,7 @@
     text-align: center;
   }
 
-  .banner-left,
+  .banner-left5,
   .banner-right {
     flex: 100%;
   }
@@ -185,11 +187,11 @@
 
 /* Mobile Phones */
 @media (max-width: 480px) {
-  .banner-left h1 {
+  .banner-left5 h1 {
     font-size: 1.8rem;
   }
 
-  .banner-left p {
+  .banner-left5 p {
     font-size: 1rem;
   }
 

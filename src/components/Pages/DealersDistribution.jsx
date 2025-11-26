@@ -18,7 +18,7 @@ const DealersDistribution = () => {
 
       {/* ===== Banner Section ===== */}
       <section className="dealers-banner"  >
-        <div className="banner-left">
+        <div className="banner-left5">
           <h1>Dealers & Distribution</h1>
           <p>
             Expand your business reach with the right distribution partners.
@@ -27,7 +27,7 @@ const DealersDistribution = () => {
         </div>
 
         <div className="banner-right">
-          <img src="/d1.jpeg" alt="Dealers Banner" />
+          <img src="/bb29.jpeg" alt="Dealers Banner" />
         </div>
       </section>
 
