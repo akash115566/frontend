@@ -50,6 +50,16 @@
 .founder-image img:hover {
   transform: scale(1.05);
 }
+.founder-bg-overlay h4 {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin: 30px;
+}
+.founder-bg-overlay p,ul{
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin: 30px;
+}
 
 /* Founder Text */
 .founder-text {
@@ -180,3 +190,4 @@
     font-size: 0.85rem;
   }
 }
+

@@ -948,7 +948,10 @@ One of the most prestigious features of this platform is that it is the first pl
           <div className="content">
             <div className="text-left">
               <h2>Ms. Pooja Sharma</h2>
-              <h2>Make Your Brand Bigger</h2>
+             <h2>
+  ( Celebrity Host & Global Business Consultant, Business Legal Advisor, Members Of Brics, Founder Pooja Movie Creations, Founder<br/>  
+  <a href="https://www.dealerbanao.com" target="_blank" rel="noopener noreferrer">Dealerbanao.com</a> )
+</h2>
               <p>
                 If you do not do branding in business, how will you make a big brand? Will you tell them to be bigger just by seeing the competitors, or by doing what’s right marketing planning, you will make your brand bigger than them.
               </p>
@@ -991,7 +994,8 @@ Z" />
             </div>
             <div className="text-right">
               <h2>Mr. Ankur Bansal</h2>
-              <h2>Grow Your Business Efficiently</h2>
+              <h2>(Global Business Consultant) &
+Entrepreneur , Member of Brics , Founder Pooja Movie Creations</h2>
               <p>
                 Can your business flourish without spending a lot of money?
                 What is the best way by which money will be spent less,

@@ -23,16 +23,21 @@ const Founder = () => {
               <p>
                 BUSINESS CARE FOUNDER | SENIOR MEDIA TV ANCHOR | CELEBRITY BUSINESS COACH | YOUNGEST ENTREPRENEUR |
               </p>
-              <p>
-                Pooja Sharma is a well-known name in the country and has made a name
-                for herself with her diverse talents. If we talk about media on
-                television or acting on the small screen, she has ruled everyone’s
-                hearts with her different style at a young age. Not only this, along
-                with being a successful industrialist, she is also doing special work
-                in social upliftment in the country for the growth of the nation.At a
-                young age, she has registered the title of opening 14 companies in 12
-                years.
+             <p>
+                Pooja Sharma is a well-known personality in India, celebrated for her versatility, leadership, and exceptional achievements across media, business, and social welfare.
+           
+                She began her journey at a young age, winning hearts on television as a news anchor, and later gaining recognition as an actress in TV serials and short films. In 2008, with a bold vision, she founded her own Production Company 
+                <strong> Pooja Movie Creations</strong>, marking the beginning of her inspiring entrepreneurial journey.
+                 Along with her corporate accomplishments, Pooja Sharma has made significant contributions to society. She has served as the Chairperson of the Social Justice Board, and later founded and chaired the Commission for National Justice & Women Safety, playing a pivotal role in social welfare and women empowerment.
+             
+                Her influence extends globally as well—she is associated with BRICS, actively promoting international trade expansion and global business collaborations.
+           
+                A law graduate and an experienced business legal advisor, she combines knowledge with leadership, making her contributions diverse and impactful. Not only is she a successful industrialist, but she is also deeply committed to social upliftment, dedicated to empowering communities and contributing to national progress.
+            
+                At a young age, she achieved a rare milestone—establishing 14 companies in just 14 years, making her one of the most dynamic businesswomen in the country.
               </p>
+          
+         
 
              <Link to="/Contact"> <button className="founder-btn">Learn More</button></Link>
             </div>
@@ -44,6 +49,35 @@ const Founder = () => {
               <img src="/about/s1.webp" alt="Founder" />
             </div>
           </div>
+           
+
+              <h4>Her Upcoming Exclusive TV Show</h4>
+              <p>
+                Now, Pooja Sharma is coming with her exclusive business television show, where she will share deep insights on:
+
+              </p>
+              <p>
+                Over the years, she has evolved into a dynamic multi-venture woman entrepreneur, successfully conceptualizing and establishing diverse businesses. Her forward-thinking mindset and determination have positioned her as a leading name in India’s media and business industry.
+              </p>
+              
+               
+              <ul>
+                <li>New business ideas</li>
+                <li>Global trade opportunities</li>
+                <li>International collaborations</li>
+                <li>Government schemes for entrepreneurs</li>
+              </ul>
+              <p>
+                The show will also feature new startups, business owners, and founders, giving them a platform to share their journey and reach millions.
+              </p>
+              <p>
+                This prestigious TV Show (<strong>BUSINESS CARE</strong>) will be telecast on:
+              </p>
+              <ul>
+                <li>📺 AajTak HD News Channel</li>
+                <li>📺 CNBC Prime Global Business Channel</li>
+                <li>📺 ABP News Channel</li>
+              </ul>
         </div>
       </section>
 
