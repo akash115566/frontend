@@ -210,43 +210,40 @@ const Slide = () => {
 
  
  {/* 🔹 =====================css-175====================== */}
-     <div className="tv-banner">
-     <div className="animated-box">
-      <h1 key={index} className="change-text">
-        {texts[index]}
-      </h1>
-    </div>
-
-
-
-
-
-        
- 
-  <div className="tv-left">
-    <h1>
-            MSME Business Care Smarter, <span>Grow Together</span>
-          </h1>
-          <h1>क्या आप एक स्टार्टअप है?<br />क्या आप अपने बिजनेस को बड़ा बनाना चाहते हैं</h1>
-  <p>
-            <ul className="hero-con">
-              <li >बिजनेस की नई ऊंचाइयां छूने के लिए हो जाएं तैयार MSME BUSINESS CARE  के मंच से 140 करोड़ लोगो तक पहुंचाये अपने बिजनेस को
-              </li>
-              <li>FOR REGISTRATIONS CONTACT 7042438293
-              </li>
-              <li>Email:-msmebusinesscare.com
-              </li>
-              <li>Get chance to come on AAJTAK CHANNEL Through our Interview Section if u are a MSME , Business / Industrailst / business owner / startup / fmcg company / firm etc
-              </li>
-            </ul>
-          </p>
-   <Link to="/Contact">  <button className="tv-btn">अभी संपर्क करें</button></Link>
+    <div className="tv-banner">
+  {/* LEFT VIDEO */}
+  <div className="tv-video-container">
+    <video className="tv-video"
+    src="./vid5.mp4"
+    type="video/mp4"
+    controls      // ✅ Add this
+    autoPlay
+    loop
+    muted>
+      <source src="./vid5.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
   </div>
 
-
-
+  {/* RIGHT CONTENT */}
+  <div className="tv-left">
+    <h1>
+      MSME Business Care Smarter, <span>Grow Together</span>
+    </h1>
+    <h1>
+      क्या आप एक स्टार्टअप है?<br />क्या आप अपने बिजनेस को बड़ा बनाना चाहते हैं
+    </h1>
+    <ul className="hero-con">
+      <li>बिजनेस की नई ऊंचाइयां छूने के लिए हो जाएं तैयार MSME BUSINESS CARE के मंच से 140 करोड़ लोगो तक पहुंचाये अपने बिजनेस को</li>
+      <li>FOR REGISTRATIONS CONTACT 7042438293</li>
+      <li>Email: msmebusinesscare.com</li>
+      <li>Get chance to come on AAJTAK CHANNEL Through our Interview Section if you are a MSME, Business / Industrialist / startup / FMCG company / firm etc</li>
+    </ul>
+    <Link to="/Contact">
+      <button className="tv-btn">अभी संपर्क करें</button>
+    </Link>
+  </div>
 </div>
-
 
 
 

@@ -180,168 +180,82 @@
 /* MAIN BANNER CONTAINER */
 .tv-banner {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 40px 30px;
-  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap; /* Mobile responsive */
   width: 100%;
-  box-sizing: border-box;
-  flex-wrap: wrap;
+  padding: 20px;
 }
 
-/* LEFT SIDE */
+/* LEFT VIDEO */
+.tv-video-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tv-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* RIGHT CONTENT */
 .tv-left {
   flex: 1;
-  color: #fff;
+  min-width: 300px;
+  color: white;
 }
 
 .tv-left h1 {
-  font-size: 32px;
-  font-weight: 800;
+  font-size: 35px;
   margin-bottom: 15px;
-  line-height: 1.3;
+  color: white;
 }
 
-.tv-left h1 span {
-  color: #00d9ff;
+.tv-left span {
+  color: #ff5c00;
 }
 
-.tv-left p {
-  margin-top: 10px;
-}
-
-.hero-con li {
-  margin-bottom: 10px;
-  font-size: 18px;
-  line-height: 1.4;
+.hero-con {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .tv-btn {
-  margin-top: 25px;
-  background: #00aaff;
+  padding: 12px 25px;
+  background-color: #ff5c00;
   color: #fff;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 20px;
-  font-weight: 700;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 16px;
 }
 
-.tv-btn:hover {
-  background: #0088cc;
-}
-
-/* RIGHT SIDE (Animated Heading Box) */
-.animated-box {
-  border: 3px solid white;
-  border-radius: 9px ;
-  text-align: left;
-  padding: 40px 50px;
-  width: 50%;
-  overflow: hidden;
-  margin-left: 20px;
-  height: 240px; /* fix height for smooth transition */
-}
-
-.change-text {
-  font-size: 28px;
-  font-weight: 800;
-  color: #fff;
-  opacity: 0;
-  transform: translateX(-40px);
-  animation: slideChange 2.5s ease-out forwards;
-}
-
-@keyframes slideChange {
-  0% {
-    opacity: 0;
-    transform: translateX(-40px) scale(0.95);
-    filter: blur(6px);
-  }
-  50% {
-    opacity: 1;
-    transform: translateX(0px) scale(1);
-    filter: blur(0px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-/* RESPONSIVE FOR TABLET */
-@media (max-width: 1024px) {
+/* RESPONSIVE */
+@media (max-width: 992px) {
   .tv-banner {
-    padding: 30px 20px;
+    flex-direction: column; /* Stack video and content on mobile */
+    align-items: center;
   }
 
-  .ani-line {
-    font-size: 30px;
+  .tv-video-container {
+    height: 300px;
+    max-width: 100%;
   }
 
   .tv-left h1 {
-    font-size: 28px;
-  }
-}
-
-/* RESPONSIVE FOR MOBILE */
-@media (max-width: 768px) {
-  .tv-banner {
-    flex-direction: column;
-    text-align: left;
-  }
-
-  .tv-left,
-  .ani-text-box {
-    width: 100%;
-  }
-
-  .ani-line {
-    font-size: 26px;
-  }
-
-  .tv-left h1 {
-    font-size: 24px;
-  }
-
-  .hero-con li {
-    font-size: 16px;
-  }
-
-  .tv-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 480px) {
-  .animated-box {
-    width: 100%;
-    padding-left: 25px;
-    height: auto; /* content ko cut hone se bachata hai */
-    margin-left: 0;
-  }
-
-  .change-text {
     font-size: 20px;
-    margin-left: 30px;
   }
 }
 
-@media (max-width: 360px) {
-  .animated-box {
-    width: 95%;
-    padding: 20px 15px;
-    height: auto; /* fully auto height */
-    margin-left: 20;
-  }
-
-  .change-text {
-    font-size: 12px;
-    margin-left: 30px;
-  }
-}
 
 
 
